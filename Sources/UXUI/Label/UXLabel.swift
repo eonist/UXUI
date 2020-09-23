@@ -1,3 +1,3 @@
-import NSLabel
+import Foundation
 
 public typealias UXLabel = NSLabel

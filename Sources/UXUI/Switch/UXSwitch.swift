@@ -1,3 +1,3 @@
-import NSSwitch
+import Foundation
 
 public typealias UXSwitch = NSSwitch
