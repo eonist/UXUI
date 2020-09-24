@@ -13,6 +13,6 @@ open class SelectableTextButton: TextButton, Selectable {
       self.selected = selected
       let style: TextButton.Style = selected ? styles.active : styles.inActive
       super.init(text: text, style: style, frame: frame)
-      _ = { self.selected = self.selected }()/*hack*/
+      _ = { self.selected = self.selected }() // hack
    }
 }
