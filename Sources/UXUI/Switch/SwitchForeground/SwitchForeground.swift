@@ -2,8 +2,7 @@ import Cocoa
 import Spatial
 import QuartzCore
 
-public class SwitchForeground: NSView, ConstraintKind {
-   override open var isFlipped: Bool { true }
+public class SwitchForeground: UXView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
@@ -21,13 +20,6 @@ public class SwitchForeground: NSView, ConstraintKind {
 //      self.layer?.backgroundColor = backgroundColor.cgColor
       self.layer?.rasterizationScale = 2.0 * NSScreen.main!.backingScaleFactor
       self.layer?.shouldRasterize = true
-   }
-   /**
-    * - Note: Avoid having to repeat this method in every subclass that uses :UIView / :NSView
-    */
-   @available(*, unavailable)
-   public required init?(coder: NSCoder) {
-      fatalError("init?(coder:) is not supported")
    }
 }
 /**

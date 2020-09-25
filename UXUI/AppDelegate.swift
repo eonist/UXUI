@@ -1,4 +1,5 @@
 import Cocoa
+import With
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -12,12 +13,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    }
 }
 extension AppDelegate {
-   func createView() -> NSView {
-      let contentRect = window.contentRect(forFrameRect: window.frame)/*size of win sans titlebar*/
-      let view: View = .init(frame: contentRect)
-      window.contentView = view
-      view.layer?.backgroundColor = NSColor.white.cgColor
-      return view
+   /**
+    * - Fixme: ⚠️️ use uxview instead?
+    */
+   func createView() -> View {
+      with(.init(frame: window.contentRect(forFrameRect: window.frame))) {
+         window.contentView = $0
+         $0.layer?.backgroundColor = NSColor.white.cgColor
+      }
    }
 }
-

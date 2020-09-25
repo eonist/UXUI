@@ -8,8 +8,7 @@ import Cocoa
  * view.addSubview(btn)
  * btn.tapUpInsideCallBack = { Swift.print("🎉") }
  */
-open class Button: NSView, ConstraintKind { // We use HybridView because that is layerbacked in macOS
-   override open var isFlipped: Bool { true }
+open class Button: UXView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
@@ -39,12 +38,5 @@ open class Button: NSView, ConstraintKind { // We use HybridView because that is
       self.wantsLayer = true // If true then view is layer backed
       self.layer?.rasterizationScale = 2.0 * NSScreen.main!.backingScaleFactor
       self.layer?.shouldRasterize = true
-   }
-   /**
-    * - Note: Avoid having to repeat this method in every subclass that uses :UIView / :NSView
-    */
-   @available(*, unavailable)
-   public required init?(coder: NSCoder) {
-      fatalError("init?(coder:) is not supported")
    }
 }

@@ -3,11 +3,11 @@ import Cocoa
  * SwitchButton
  * - Abstract: On or off state (Looks like the classic switch toggle in iOS)
  */
-open class SwitchComponent: NSView {
-   override open var isFlipped: Bool { true } // top to bottom
+open class SwitchComponent: UXView {
    lazy var label: NSLabel = createLabel() // text lable
    public lazy var switcher: NSSwitch = createSwitch() // right switch
    let text: String // initial text - Fixme: ⚠️️ rename to initText ?
+   // - Fixme: ⚠️️ rename to just style
    let switchStyles: NSSwitch.SwitchStyles // on / off style
    open var selected: Bool { didSet { switcher.selected = selected } }
    /**
@@ -26,11 +26,5 @@ open class SwitchComponent: NSView {
 //      layer?.backgroundColor = NSColor.orange.cgColor
       _ = switcher
       _ = label
-   }
-   /**
-    * Boilerplate
-    */
-   required public init?(coder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
    }
 }

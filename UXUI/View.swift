@@ -5,15 +5,20 @@ import Spatial
 open class View: UXView {
    lazy var label: UXLabel = creatLabel()
    lazy var switchComponent: SwitchComponent = createSwitchComponent()
-   
+   lazy var textInput: UXTextInput = createTextInput()
+   /**
+    * Init
+    */
    override public init(frame: CGRect) {
       super.init(frame: frame)
       Swift.print("hello world")
       self.wantsLayer = true // if true then view is layer backed
       createUI()
    }
-
 }
+/**
+ * Create
+ */
 extension View {
    /**
     * UI
@@ -21,7 +26,7 @@ extension View {
    func createUI() {
       _ = label
       _ = switchComponent
-      // textInputComponent
+      _ = textInput
       // SwitchComponent
       // TextButton
       // IconButton (see Passbook project)
@@ -48,6 +53,15 @@ extension View {
       with(.init(text: "Toggle: ", selected: false)) {
          self.addSubview($0)
          $0.anchorAndSize(to: label, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+      }
+   }
+   /**
+    * TextInput
+    */
+   func createTextInput() -> UXTextInput {
+      with(.init()) {
+         self.addSubview($0)
+         $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
 }
