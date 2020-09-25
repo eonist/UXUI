@@ -10,7 +10,7 @@ open class NSLabel: NSTextField {
    /**
     * - Fixme: ⚠️️ write doc
     */
-   override init(frame frameRect: NSRect) {
+   override init(frame frameRect: NSRect = .zero) {
       super.init(frame: frameRect)
       self.isBezeled = false
       self.drawsBackground = false
