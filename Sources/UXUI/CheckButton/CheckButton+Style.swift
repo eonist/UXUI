@@ -2,10 +2,10 @@ import Cocoa
 /**
  * Typealias
  */
-extension CheckButton {
+extension CheckBox {
    public struct Styles {
-      let active: CheckButton.Style
-      let inActive: CheckButton.Style
+      let active: CheckBox.Style
+      let inActive: CheckBox.Style
    }
    public struct Style {
       let backgroundColor: NSColor
@@ -13,13 +13,22 @@ extension CheckButton {
       let isRounded: Bool
    }
 }
-extension CheckButton.Style {
-   public static let `default`: CheckButton.Style = .init(backgroundColor: .white, borderColor: .black, isRounded: true)
-   public static let alternate: CheckButton.Style = .init(backgroundColor: .black, borderColor: .white, isRounded: true)
+/**
+ * Getters
+ */
+extension CheckBox.Style {
+   public static let `default`: CheckBox.Style = .init(backgroundColor: .white, borderColor: .black, isRounded: true)
+   public static let alternate: CheckBox.Style = .init(backgroundColor: .black, borderColor: .white, isRounded: true)
+   /**
+    * button style getter
+    */
+   var buttonStyle: Button.Style {
+      .init(backgroundColor: self.backgroundColor, borderColor: self.borderColor, borderWidth: 1, isRounded: self.isRounded)
+   }
 }
 /**
  * active / inActive
  */
-extension CheckButton.Styles {
-   public static let `default`: CheckButton.Styles = .init(active: .alternate, inActive: .default)
+extension CheckBox.Styles {
+   public static let `default`: CheckBox.Styles = .init(active: .alternate, inActive: .default)
 }

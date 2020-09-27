@@ -2,16 +2,14 @@ import Foundation
 import With
 import Spatial
 
-extension CheckBoxButton {
+extension CheckBoxComponent {
    /**
     * TextField
     */
-   func createTextField() -> NSLabel {
-      with(.init()) {
+   func createLabel() -> UXLabel {
+      with(.init(style: CheckBoxComponent.Style.default.label)) {
          $0.text = self.text
-         $0.textColor = CheckBoxButton.Style.default.textColor
          $0.textAlignment = .left
-         $0.font = CheckBoxButton.Style.default.font
          $0.centerVertically()
          self.addSubview($0)
          $0.size(to: self, axis: .ver, toAxis: .ver)
@@ -22,8 +20,8 @@ extension CheckBoxButton {
    /**
     * CheckBox
     */
-   func createCheckBox() -> CheckButton {
-      with(.init(selected: self.selected, styles: self.checkBoxStyles, frame: .zero)) { // ToggleButton.init(isChecked:self.isChecked,texts:texts)
+   func createCheckBox() -> CheckBox {
+      with(.init(selected: self.selected, styles: CheckBoxComponent.Style.default.checkBox, frame: .zero)) { // ToggleButton.init(isChecked:self.isChecked,texts:texts)
          self.addSubview($0)
          $0.anchor(to: self, align: .topRight, alignTo: .topRight)
          $0.size(to: self, axis: .ver, toAxis: .ver)

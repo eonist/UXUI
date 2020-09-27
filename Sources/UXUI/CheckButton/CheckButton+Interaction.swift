@@ -2,7 +2,7 @@ import Foundation
 /**
  * interaction
  */
-extension CheckButton {
+extension CheckBox {
    /**
     * onTapUpInside
     */

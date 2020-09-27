@@ -27,11 +27,12 @@ extension View {
       _ = label
       _ = switchComponent
       _ = textInput
-      // SwitchComponent
-      // TextButton
-      // IconButton (see Passbook project)
-      // SliderComponent
-      // selectableTextButton?
+      // Text ButtonComponent?
+      // checkbox component
+      // Slider Component
+      // selectableTextButton component?
+      // IconButton component (see Passbook project)
+      // add darkmode 👌
    }
    /**
     * Label

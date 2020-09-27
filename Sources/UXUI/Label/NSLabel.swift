@@ -81,6 +81,13 @@ extension NSLabel {
       self.textAlignment = style.textAlignment
       centerVertically()
    }
+   /**
+    * Init with style
+    */
+   convenience init(style: UXLabel.Style = .default) {
+      self.init(frame: .zero)
+      setStyle(style: style)
+   }
 }
 /**
  * Style
