@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 extension AppDelegate {
    /**
-    * - Fixme: ⚠️️ use uxview instead?
+    * - Fixme: ⚠️️ use UXView instead?
     */
    func createView() -> View {
       with(.init(frame: window.contentRect(forFrameRect: window.frame))) {

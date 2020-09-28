@@ -12,7 +12,7 @@ open class CheckBoxComponent: UXView {
    /**
     * Initiate
     */
-   public init(text: String, selected: Bool, style: Style) {
+   public init(text: String = "CheckBox", selected: Bool = false, style: Style = .default) {
       self.text = text
       self.selected = selected
       self.style = style

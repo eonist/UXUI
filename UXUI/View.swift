@@ -6,6 +6,8 @@ open class View: UXView {
    lazy var label: UXLabel = creatLabel()
    lazy var switchComponent: SwitchComponent = createSwitchComponent()
    lazy var textInput: UXTextInput = createTextInput()
+   lazy var textButtonComponent: TextButtonComponent = createTextComponent()
+   lazy var checkBoxComponent: CheckBoxComponent = createCheckBoxComponent()
    /**
     * Init
     */
@@ -27,11 +29,12 @@ extension View {
       _ = label
       _ = switchComponent
       _ = textInput
-      // Text ButtonComponent?
-      // checkbox component
+      _ = textButtonComponent
+      _ = checkBoxComponent
       // Slider Component
-      // selectableTextButton component?
-      // IconButton component (see Passbook project)
+      // selectableTextButton component (on / off) ?
+      // stepperComponent 100 (+1-1)
+      // IconButton component (see Passbook project) (user icon)
       // add darkmode 👌
    }
    /**
@@ -39,7 +42,7 @@ extension View {
     */
    func creatLabel() -> UXLabel {
       with(.init()) {
-         $0.textColor = NSColor.black
+         $0.textColor = .black
          $0.textAlignment = .center
          $0.text = "Hello world"
          self.addSubview($0)
@@ -63,6 +66,24 @@ extension View {
       with(.init()) {
          self.addSubview($0)
          $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+      }
+   }
+   /**
+    * TextComponent
+    */
+   func createTextComponent() -> TextButtonComponent {
+      with(.init()) {
+         self.addSubview($0)
+         $0.anchorAndSize(to: textInput, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+      }
+   }
+   /**
+    * CheckBoxComponent
+    */
+   func createCheckBoxComponent() -> CheckBoxComponent {
+      with(.init()) {
+         self.addSubview($0)
+         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
 }

@@ -84,7 +84,7 @@ extension NSLabel {
    /**
     * Init with style
     */
-   convenience init(style: UXLabel.Style = .default) {
+   public convenience init(style: UXLabel.Style = .default) {
       self.init(frame: .zero)
       setStyle(style: style)
    }
