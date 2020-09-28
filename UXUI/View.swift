@@ -8,12 +8,13 @@ open class View: UXView {
    lazy var textInput: UXTextInput = createTextInput()
    lazy var textButtonComponent: TextButtonComponent = createTextComponent()
    lazy var checkBoxComponent: CheckBoxComponent = createCheckBoxComponent()
+   lazy var sliderComponent: SliderComponent = createSliderComponent()
    /**
     * Init
     */
    override public init(frame: CGRect) {
       super.init(frame: frame)
-      Swift.print("hello world")
+      Swift.print("Hello world")
       self.wantsLayer = true // if true then view is layer backed
       createUI()
    }
@@ -24,18 +25,16 @@ open class View: UXView {
 extension View {
    /**
     * UI
+    * - Fixme: ⚠️️ add darkmode (figure out how to detect darkmode in macos)
     */
    func createUI() {
+      // 🏀 add the IconButton on top?
       _ = label
       _ = switchComponent
       _ = textInput
       _ = textButtonComponent
       _ = checkBoxComponent
-      // Slider Component
-      // selectableTextButton component (on / off) ?
-      // stepperComponent 100 (+1-1)
-      // IconButton component (see Passbook project) (user icon)
-      // add darkmode 👌
+      _ = sliderComponent
    }
    /**
     * Label
@@ -81,6 +80,15 @@ extension View {
     * CheckBoxComponent
     */
    func createCheckBoxComponent() -> CheckBoxComponent {
+      with(.init()) {
+         self.addSubview($0)
+         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+      }
+   }
+   /**
+    * SliderComponent
+    */
+   func createSliderComponent() -> SliderComponent {
       with(.init()) {
          self.addSubview($0)
          $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))

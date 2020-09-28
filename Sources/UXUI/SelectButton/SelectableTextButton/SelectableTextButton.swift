@@ -1,6 +1,8 @@
 import Foundation
 import QuartzCore
-
+/**
+ * - Fixme: ⚠️️ rename to SelectTextButton
+ */
 open class SelectableTextButton: TextButton, Selectable {
    internal var styles: Styles
    open var selected: Bool {
