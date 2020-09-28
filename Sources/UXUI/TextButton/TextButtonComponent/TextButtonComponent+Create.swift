@@ -10,7 +10,7 @@ extension TextButtonComponent {
     */
    func createLabel() -> UXLabel {
       with(.init(style: TextButtonComponent.Style.default.label)) {
-         $0.text = self.text
+         $0.text = labelText
          $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)
@@ -21,7 +21,7 @@ extension TextButtonComponent {
     * CheckBox
     */
    func createTextButton() -> TextButton {
-      with(.init(text: "Exit", frame: .zero)) {
+      with(.init(text: buttonText, frame: .zero)) {
          self.addSubview($0)
          $0.anchorAndSize(to: $0, align: .topLeft, alignTo: .topLeft, multiplier: .init(width: 0.5, height: 1))
          $0.anchorAndSize(to: self, height: 44, align: .centerCenter, alignTo: .centerCenter, sizeOffset: .init(width: -80, height: 0))

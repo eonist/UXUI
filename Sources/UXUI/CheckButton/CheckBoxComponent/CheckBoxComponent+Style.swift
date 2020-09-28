@@ -2,8 +2,8 @@ import Cocoa
 
 extension CheckBoxComponent {
    public struct Style {
-      let label: UXLabel.Style
-      let checkBox: CheckBox.Styles
+      public let label: UXLabel.Style
+      public let checkBox: CheckBox.Styles
    }
 }
 extension CheckBoxComponent.Style {

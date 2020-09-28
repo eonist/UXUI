@@ -11,7 +11,7 @@ public class VolumeSlider: Slider {
    override func createThumb() -> RoundedThumb {
       with(.init()) {
          addSubview($0)
-         $0.layer?.backgroundColor = NSColor.green.cgColor
+         $0.layer?.backgroundColor = style.thumbColor.cgColor
          $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .topLeft, alignTo: .topLeft)
          $0.onDown = onButtonDown
          $0.onMove = onButtonMove
@@ -23,7 +23,7 @@ public class VolumeSlider: Slider {
    override func createBackground() -> RoundedTrack {
       with(.init()) {
          addSubview($0)
-         $0.layer?.backgroundColor = NSColor.lightGray.cgColor
+         $0.layer?.backgroundColor = style.trackColor.cgColor
          $0.anchorAndSize(to: self, align: .topLeft, alignTo: .topLeft)
          $0.onDown = onBackgroundDown
          $0.onMove = onBackgroundMove

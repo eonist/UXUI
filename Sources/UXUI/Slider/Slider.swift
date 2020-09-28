@@ -12,6 +12,7 @@ open class Slider: UXView {
    let axis: Axis
    let buttonSide: CGFloat
    var tempThumbMousePos: CGPoint = .zero // Needed for when you use the thumb to slide
+   let style: Style
    open var progress: CGFloat {
       didSet {
          let value: CGFloat = SliderHelper.thumbPosition(progress: progress, side: frame.size[axis], thumbSide: button.frame.size[axis])
@@ -27,10 +28,11 @@ open class Slider: UXView {
     *   - buttonSide: The dimension of the button
     *   - progress: 0 - 1
     */
-   public init(axis: Axis, buttonSide: CGFloat, progress: CGFloat = 0) {
+   public init(axis: Axis, buttonSide: CGFloat, progress: CGFloat = 0, style: Style = .default) {
       self.axis = axis
       self.buttonSide = buttonSide
       self.progress = progress
+      self.style = style
       super.init(frame: .zero)
       _ = background
       _ = button
