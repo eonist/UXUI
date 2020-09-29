@@ -20,7 +20,7 @@ extension UXSlider {
       onChange(self.progress)
    }
    /**
-    * - Fixme: ⚠️️ Not needed, as move fires immediatly
+    * - Fixme: ⚠️️ Not really needed, as move fires immediatly
     * - Parameter p: position of the mouse on the track
     */
    open func onBackgroundDown(p: CGPoint) {

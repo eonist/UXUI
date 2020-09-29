@@ -28,7 +28,6 @@ extension View {
     * - Fixme: ⚠️️ add darkmode (figure out how to detect darkmode in macos)
     */
    func createUI() {
-      // 🏀 add the IconButton on top?
       _ = label
       _ = switchComponent
       _ = textInput

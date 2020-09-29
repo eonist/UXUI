@@ -5,7 +5,7 @@ import QuartzCore
  */
 extension UXTextButton {
    /**
-    * - Fixme: ⚠️️ Rename to Style?
+    * Label and button style
     */
    public struct Style {
       let button: UXButton.Style

@@ -8,7 +8,7 @@ import Cocoa
  */
 open class UXLabel: NSTextField {
    /**
-    * - Fixme: ⚠️️ write doc
+    * - Parameter frameRect: size of label if not using auto-layout
     */
    override init(frame frameRect: NSRect = .zero) {
       super.init(frame: frameRect)

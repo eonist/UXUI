@@ -7,17 +7,16 @@ open class SwitchComponent: UXView {
    lazy var label: UXLabel = createLabel() // text lable
    public lazy var switcher: UXSwitch = createSwitch() // right switch
    let text: String // initial text - Fixme: ⚠️️ rename to initText ?
-   // - Fixme: ⚠️️ move style to this class scope
-   let style: UXSwitch.SwitchStyles // on / off style
+   let style: Style // on / off style
    open var selected: Bool { didSet { switcher.selected = selected } }
    /**
     * Initiate
     * - Parameters:
     *   - text: Title text
     *   - selected: on or off
-    *   - switchStyles: on / off style
+    *   - style: lable and switch style
     */
-   public init(text: String = "Test", selected: Bool = false, style: UXSwitch.SwitchStyles = .default) {
+   public init(text: String = "Text", selected: Bool = false, style: Style = .default) {
       self.text = text
       self.selected = selected
       self.style = style

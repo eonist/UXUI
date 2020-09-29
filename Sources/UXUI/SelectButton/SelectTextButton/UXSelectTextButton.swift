@@ -1,7 +1,7 @@
 import Foundation
 import QuartzCore
 /**
- * - Fixme: ⚠️️ rename to SelectTextButton
+ * A TextButton that can have a selected state / style
  */
 open class UXSelectTextButton: UXTextButton, Selectable {
    internal var styles: Styles

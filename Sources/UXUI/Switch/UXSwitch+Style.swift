@@ -4,14 +4,14 @@ import Cocoa
  */
 extension UXSwitch {
    /**
-    * - Fixme: ⚠️️ rename to something better, Styles
+    * on / off style
     */
-   public struct SwitchStyles {
+   public struct Styles {
       let selected: SwitchStyle // selected fore / background
       let unSelected: SwitchStyle // unSelected fore / background
    }
    /**
-    * - Fixme: ⚠️️ rename to Style
+    * - Note: This can't be named Style, because the class subclass Button which has that domain
     */
    public struct SwitchStyle {
       let foregroundColor: NSColor // color of foreground
@@ -21,8 +21,8 @@ extension UXSwitch {
 /**
  * Const
  */
-extension UXSwitch.SwitchStyles {
-   public static let `default`: UXSwitch.SwitchStyles = .init(selected: selectedStyle, unSelected: unSelectedStyle)
-   public static let selectedStyle: UXSwitch.SwitchStyle = .init(foregroundColor: .gray, backgroundColor: .lightGray)
-   public static let unSelectedStyle: UXSwitch.SwitchStyle = .init(foregroundColor: .lightGray, backgroundColor: .gray)
+extension UXSwitch.Styles {
+   public static let `default`: UXSwitch.Styles = .init(selected: selected, unSelected: unSelected)
+   public static let selected: UXSwitch.SwitchStyle = .init(foregroundColor: .gray, backgroundColor: .lightGray)
+   public static let unSelected: UXSwitch.SwitchStyle = .init(foregroundColor: .lightGray, backgroundColor: .gray)
 }

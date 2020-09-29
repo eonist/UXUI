@@ -1,5 +1,8 @@
 import Cocoa
 import Spatial
+// 🏀
+// finish cleanup
+//add logo
 /**
  * - Fixme: ⚠️️ Probably rename to onMoveCallback, or move, or moveCallBack et
  */

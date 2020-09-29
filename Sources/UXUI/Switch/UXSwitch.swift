@@ -7,7 +7,7 @@ import QuartzCore
  * - Fixme: ⚠️️ Add ability to drag? see legacy project for code etc
  */
 open class UXSwitch: UXButton, Selectable {
-   var switchStyles: SwitchStyles
+   var switchStyles: Styles
    public var switchStyle: SwitchStyle
    public lazy var foreground: SwitchForeground = createForeground()
    /**
@@ -28,7 +28,7 @@ open class UXSwitch: UXButton, Selectable {
     *   - styles: on / off (foreground/ background)
     *   - frame: size of Switch
     */
-   public init(isSelected: Bool, styles: SwitchStyles = .default, frame: CGRect = .zero) {
+   public init(isSelected: Bool, styles: Styles = .default, frame: CGRect = .zero) {
       self.selected = isSelected
       self.switchStyles = styles
       self.switchStyle = isSelected ? styles.selected : styles.unSelected

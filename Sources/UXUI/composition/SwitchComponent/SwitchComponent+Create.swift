@@ -7,9 +7,7 @@ extension SwitchComponent {
     * Creates the TextField
     */
    func createLabel() -> UXLabel {
-      with(.init()) {
-         $0.textColor = SwitchComponent.defaultStyle.textColor
-         $0.font = SwitchComponent.defaultStyle.font
+      with(.init(style: self.style.label)) {
          $0.text = self.text
          $0.textAlignment = .left 
          $0.centerVertically()
@@ -20,7 +18,7 @@ extension SwitchComponent {
       }
    }
    /**
-    * Creates the checkBox
+    * Creates the Switch
     */
    func createSwitch() -> UXSwitch {
       with(.init(isSelected: self.selected)) {

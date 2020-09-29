@@ -1,7 +1,7 @@
 import Cocoa
 /**
  * - Abstract: This class is needed to enable UILabel like attributes for MacOS
- * - Fixme: ⚠️️ since this class isnt even public im sure we could scope it under Label ?
+ * - Fixme: ⚠️️ since this class isn't even public im sure we could scope it under Label ?
  */
 class VerticallyAlignedTextFieldCell: NSTextFieldCell {
    let textHeight: CGFloat

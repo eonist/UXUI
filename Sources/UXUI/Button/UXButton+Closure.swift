@@ -1,4 +1,17 @@
 import Foundation
+import QuartzCore
+import Cocoa
+/**
+ * Closure signatures
+ */
+extension UXButton {
+   public typealias UpInsideCallBack = () -> Void
+   public typealias UpOutsideCallBack = () -> Void
+   public typealias DownCallBack = () -> Void
+   public typealias UpCallBack = () -> Void
+   public typealias OverCallBack = () -> Void
+   public typealias OutCallBack = () -> Void
+}
 /**
  * Const
  */

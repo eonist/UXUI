@@ -2,7 +2,6 @@ import Cocoa
 import QuartzCore
 import Spatial
 /**
- * - Fixme: ⚠️️ Don't use autolayout inside the component (override layoutSubviews and set things with CGFloats etc)
  * - Fixme: ⚠️️ Add support for thumb.size based on background height
  */
 open class UXSlider: UXView {
