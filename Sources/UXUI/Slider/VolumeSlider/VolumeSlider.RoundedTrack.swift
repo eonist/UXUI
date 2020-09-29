@@ -10,7 +10,7 @@ extension VolumeSlider {
        */
       override func layout() {
          super.layout()
-         guard let axis = (self.superview as? Slider)?.axis else { return }
+         guard let axis = (self.superview as? UXSlider)?.axis else { return }
          switch axis {
          case .hor:
             self.layer?.cornerRadius = self.frame.height / 4

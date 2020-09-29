@@ -1,7 +1,7 @@
 import Foundation
 import QuartzCore
 
-extension Slider {
+extension UXSlider {
    public enum Axis {
       case hor, ver
    }
@@ -15,7 +15,7 @@ extension CGSize {
     * ## Examples:
     * CGSize(width: 100, height: 200)[.hor] // 100
     */
-   subscript(axis: Slider.Axis) -> CGFloat { // Convenience
+   subscript(axis: UXSlider.Axis) -> CGFloat { // Convenience
       get {
          switch axis {
          case .hor:
@@ -39,7 +39,7 @@ extension CGPoint {
     * ## Examples:
     * CGPoint(x: 20, y: 30)[.hor] // 20
     */
-   subscript(dir: Slider.Axis) -> CGFloat { // Convenience
+   subscript(dir: UXSlider.Axis) -> CGFloat { // Convenience
       get {
          switch dir {
          case .hor:

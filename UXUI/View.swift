@@ -53,7 +53,7 @@ extension View {
     * Switch
     */
    func createSwitchComponent() -> SwitchComponent {
-      with(.init(text: "Toggle: ", selected: false)) {
+      with(.init(text: "Toggle: ", selected: false, style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: label, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
@@ -62,7 +62,7 @@ extension View {
     * TextInput
     */
    func createTextInput() -> UXTextInput {
-      with(.init()) {
+      with(.init(label: "Label", input: "input", style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
@@ -71,7 +71,7 @@ extension View {
     * TextComponent
     */
    func createTextComponent() -> TextButtonComponent {
-      with(.init()) {
+      with(.init(labelText: "Label", buttonText: "Button", style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: textInput, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
@@ -80,7 +80,7 @@ extension View {
     * CheckBoxComponent
     */
    func createCheckBoxComponent() -> CheckBoxComponent {
-      with(.init()) {
+      with(.init(text: "CheckBox: ", selected: false, style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
@@ -89,7 +89,7 @@ extension View {
     * SliderComponent
     */
    func createSliderComponent() -> SliderComponent {
-      with(.init()) {
+      with(.init(text: "Slider: ", style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }

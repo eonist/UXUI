@@ -2,29 +2,29 @@ import Cocoa
 import With
 import Spatial
 /**
- * VolumeSlider is basically just a rounded Slider
+ * Create
  */
-public class VolumeSlider: UXSlider {
+extension UXSlider {
    /**
-    * Create the button
+    * Button
     */
-   override func createThumb() -> RoundedThumb {
+   @objc func createThumb() -> Thumb {
       with(.init()) {
          addSubview($0)
          $0.layer?.backgroundColor = style.thumbColor.cgColor
-         $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .topLeft, alignTo: .topLeft)
+         $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .topLeft, alignTo: .topLeft )
          $0.onDown = onButtonDown
          $0.onMove = onButtonMove
       }
    }
    /**
-    * Create the ackground
+    * Background
     */
-   override func createBackground() -> RoundedTrack {
+   @objc func createBackground() -> Track {
       with(.init()) {
          addSubview($0)
          $0.layer?.backgroundColor = style.trackColor.cgColor
-         $0.anchorAndSize(to: self, align: .topLeft, alignTo: .topLeft)
+         $0.anchorAndSize(to: self, align: .topLeft, alignTo: .topLeft )
          $0.onDown = onBackgroundDown
          $0.onMove = onBackgroundMove
       }

@@ -5,7 +5,7 @@ import Spatial
 open class IconButton: UXButton {
    let iconURL: URL
    lazy var imageView: NSImageView = createImageView()
-   public init(style: Button.Style = .default, iconURL: URL, frame: CGRect = .zero) {
+   public init(style: UXButton.Style = .default, iconURL: URL, frame: CGRect = .zero) {
       self.iconURL = iconURL
       super.init(style: style, frame: frame)
       _ = imageView

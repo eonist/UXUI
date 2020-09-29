@@ -3,20 +3,20 @@ import With
 import Spatial
 
 open class UXTextInput: UXView {
-   lazy var label: NSLabel = createLabel() // text lable
-   lazy var textInput: NSLabel = createInputText()
-   let lableText: String // initial text - Fixme: ⚠️️ rename to initText ?
+   lazy var label: UXLabel = createLabel() // text lable
+   lazy var textInput: UXLabel = createInputText()
+   let labelText: String
    let inputText: String
    let style: Style
    /**
     * init
     */
-   public init(lableText: String = "label", inputText: String = "input", style: UXTextInput.Style = .default) {
-      self.lableText = lableText
-      self.inputText = inputText
+   public init(label: String = "label", input: String = "input", style: UXTextInput.Style = .default) {
+      self.labelText = label
+      self.inputText = input
       self.style = style
       super.init(frame: .zero)
-      _ = label
+      _ = self.label
       _ = textInput
    }
 }
@@ -24,11 +24,11 @@ extension UXTextInput {
    /**
     * label
     */
-   func createLabel() -> NSLabel {
+   func createLabel() -> UXLabel {
       with(.init()) {
          $0.textColor = UXTextInput.Style.default.label.textColor
          $0.font = UXTextInput.Style.default.label.font
-         $0.text = self.lableText
+         $0.text = self.labelText
          $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)
@@ -40,7 +40,7 @@ extension UXTextInput {
    /**
     * text-input
     */
-   func createInputText() -> NSLabel {
+   func createInputText() -> UXLabel {
       with(.init()) {
          $0.text = inputText
          $0.textColor = UXTextInput.Style.default.input.textColor // ⚠️️ fix
