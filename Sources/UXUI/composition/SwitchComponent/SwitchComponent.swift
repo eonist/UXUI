@@ -6,7 +6,7 @@ import Cocoa
 open class SwitchComponent: UXView {
    lazy var label: UXLabel = createLabel() // text lable
    public lazy var switcher: UXSwitch = createSwitch() // right switch
-   let text: String // initial text - Fixme: ⚠️️ rename to initText ?
+   let text: String // initial text
    let style: Style // on / off style
    open var selected: Bool { didSet { switcher.selected = selected } }
    /**
