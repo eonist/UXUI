@@ -1,7 +1,9 @@
 import Foundation
 import QuartzCore
 /**
- * TextButton is a Button with a Label in the center
+ * TextButton
+ * - Note: Button with a Label in the center
+ * - Fixme: ⚠️️ possibly merge into one file
  */
 open class UXTextButton: UXButton {
    public lazy var textLabel: UXLabel = createTextLabel()

@@ -9,7 +9,8 @@ public class VolumeSlider: UXSlider {
     * Create the button
     */
    override func createThumb() -> RoundedThumb {
-      with(.init()) {
+      Swift.print("createThumb")
+      return with(.init()) {
          addSubview($0)
          $0.layer?.backgroundColor = style.thumbColor.cgColor
          $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .topLeft, alignTo: .topLeft)
@@ -18,10 +19,11 @@ public class VolumeSlider: UXSlider {
       }
    }
    /**
-    * Create the ackground
+    * Create the background
     */
    override func createBackground() -> RoundedTrack {
-      with(.init()) {
+      Swift.print("createBackground")
+      return with(.init()) {
          addSubview($0)
          $0.layer?.backgroundColor = style.trackColor.cgColor
          $0.anchorAndSize(to: self, align: .topLeft, alignTo: .topLeft)
@@ -30,3 +32,4 @@ public class VolumeSlider: UXSlider {
       }
    }
 }
+// continue here: 🏀 debug why columslider isnt being displayed

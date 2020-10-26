@@ -7,6 +7,9 @@ class VerticallyAlignedTextFieldCell: NSTextFieldCell {
    let textHeight: CGFloat
    /**
     * - Fixme: ⚠️️ write doc
+    * - Parameters:
+    *   - textHeight: Height of text
+    *   - string: text in cell
     */
    init(textHeight: CGFloat, textCell string: String) {
       self.textHeight = textHeight

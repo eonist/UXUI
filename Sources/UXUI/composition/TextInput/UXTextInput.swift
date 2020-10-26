@@ -1,7 +1,9 @@
 import Foundation
 import With
 import Spatial
-
+/**
+ * Label and TextInput
+ */
 open class UXTextInput: UXView {
    lazy var label: UXLabel = createLabel() // text lable
    lazy var textInput: UXLabel = createInputText()

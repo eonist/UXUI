@@ -2,20 +2,23 @@ import Foundation
 import QuartzCore
 
 extension UXSlider {
+   /**
+    * Horizontal or vertical
+    */
    public enum Axis {
       case hor, ver
    }
 }
 /**
- * Util
+ * Size
  */
 extension CGSize {
    /**
-    * A way to get width or height based on Axis type
+    * A way to get width or height based on Axis type (Convenience)
     * ## Examples:
     * CGSize(width: 100, height: 200)[.hor] // 100
     */
-   subscript(axis: UXSlider.Axis) -> CGFloat { // Convenience
+   subscript(axis: UXSlider.Axis) -> CGFloat {
       get {
          switch axis {
          case .hor:
@@ -33,6 +36,9 @@ extension CGSize {
       }
    }
 }
+/**
+ * Point
+ */
 extension CGPoint {
    /**
     * A way to get x or y based on Axis type

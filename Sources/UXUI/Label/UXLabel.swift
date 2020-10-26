@@ -1,7 +1,9 @@
 import Cocoa
 /**
+ * Label for macOS
  * - Note: - use self.textColor to set text color
  * - Important: ⚠️️ NSTextField has unusual high resistance and hugging priority, so we need to normalize them to be able to resize window etc
+ * - Fixme: ⚠️️ possibly merge into one file
  * - Note: Supports center-aligned text
  * - Note: Same functionality as UILabel
  * - Note: Supports AutoLayout

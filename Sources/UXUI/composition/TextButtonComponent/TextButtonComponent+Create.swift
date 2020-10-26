@@ -25,8 +25,9 @@ extension TextButtonComponent {
    func createTextButton() -> UXTextButton {
       with(.init(text: buttonText, style: style.textButton)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: $0, align: .topLeft, alignTo: .topLeft, multiplier: .init(width: 0.5, height: 1))
-         $0.anchorAndSize(to: self, height: 44, align: .centerCenter, alignTo: .centerCenter, sizeOffset: .init(width: -80, height: 0))
+//         $0.anchorAndSize(to: $0, align: .topLeft, alignTo: .topLeft, multiplier: .init(width: 0.5, height: 1))
+//         $0.anchorAndSize(to: self, height: 44, align: .centerCenter, alignTo: .centerCenter, sizeOffset: .init(width: -80, height: 0))
+         $0.anchorAndSize(to: self, align: .topRight, alignTo: .topRight, multiplier: .init(width: 0.5, height: 1))
          $0.upInsideCallBack = { Swift.print("tapUpInsideCallBack") }
       }
    }

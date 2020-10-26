@@ -1,6 +1,6 @@
 import Cocoa
 /**
- * Makes it possible to utilize mouseOver/mouseOut functionality on a view (Supports custom bezier path)
+ * Makes it possible to utilize mouseOver/mouseOut functionality on a view (Supports custom bezier path, perfect for rounded buttons etc) 
  * - Abstract: In order for onOut / onOver to work, we need: a few methods and variables methods: Override: `move,entered,exited,hitTest`, variables: hasMouseEntered, createTrackingArea
  * - Discussion: we use viewUnderMouse and hit-test to make sure overlapping views also gets their say. Because otherwise the tracking area sort of becomes "see-through"
  * - Discussion: We do not store trackingArea in a variable, because the supertype should have as few variables as possible, to keep state simple, for now, only HasMOuseEntered is require for this solution to work

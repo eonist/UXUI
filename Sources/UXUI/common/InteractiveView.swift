@@ -1,6 +1,7 @@
 import Cocoa
 import Spatial
 /**
+ * - Note: Used by VolumSlider component
  * - Fixme: ⚠️️ Probably rename to onMoveCallback, or move, or moveCallBack et
  */
 open class InteractiveView: UXView, ConstraintKind {

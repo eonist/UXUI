@@ -1,5 +1,7 @@
 import Cocoa
-
+/**
+ * Flipped correctly and avoids subsequent overrides to init(coder)
+ */
 open class UXView: NSView {
    override open var isFlipped: Bool { true }
    /**

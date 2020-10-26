@@ -2,6 +2,7 @@ import Cocoa
 import Spatial
 import QuartzCore
 /**
+ * Switch for macOS (macos doesnt have this, like ios has)
  * - Fixme: ⚠️️ Add ability to add stroke?
  * - Fixme: ⚠️️ Add ability to use 1.5x width?
  * - Fixme: ⚠️️ Add ability to drag? see legacy project for code etc
@@ -32,8 +33,8 @@ open class UXSwitch: UXButton, Selectable {
       self.selected = isSelected
       self.switchStyles = styles
       self.switchStyle = isSelected ? styles.selected : styles.unSelected
-      let selectedStyle: Style = .init(backgroundColor: styles.selected.backgroundColor, borderColor: NSColor.clear, borderWidth: 0, isRounded: true)
-      let unSelectedStyle: Style = .init(backgroundColor: styles.unSelected.backgroundColor, borderColor: NSColor.clear, borderWidth: 0, isRounded: true)
+      let selectedStyle: Style = .init(backgroundColor: styles.selected.backgroundColor, borderColor: .clear, borderWidth: 0, isRounded: true)
+      let unSelectedStyle: Style = .init(backgroundColor: styles.unSelected.backgroundColor, borderColor: .clear, borderWidth: 0, isRounded: true)
       let style: Style = isSelected ? selectedStyle : unSelectedStyle
       super.init(style: style, frame: frame)
       _ = foreground

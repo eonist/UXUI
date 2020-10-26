@@ -27,14 +27,15 @@ extension View {
    /**
     * UI
     * - Fixme: ⚠️️ add darkmode support, see how you can add the darkmode lib etc (color swatches etc)
+    * - Fixme: ⚠️️ use that column align method in spatial
     */
    func createUI() {
       _ = label
       _ = textInput
       _ = textButtonComponent
-//      _ = switchComponent
-//      _ = checkBoxComponent
-//      _ = sliderComponent
+      _ = switchComponent
+      _ = checkBoxComponent
+      _ = sliderComponent
    }
    /**
     * Label
@@ -69,6 +70,7 @@ extension View {
    }
    /**
     * Switch
+    * - Fixme: ⚠️️ make 1.5x size, add border style etc
     */
    func createSwitchComponent() -> SwitchComponent {
       with(.init(text: "Toggle: ", selected: false, style: .default)) {
@@ -78,11 +80,12 @@ extension View {
    }
    /**
     * CheckBoxComponent
+    * - Fixme: ⚠️️ Add some padding to the inner graphic, use dark gray
     */
    func createCheckBoxComponent() -> CheckBoxComponent {
       with(.init(text: "CheckBox: ", selected: false, style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+         $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
    /**
@@ -91,7 +94,7 @@ extension View {
    func createSliderComponent() -> SliderComponent {
       with(.init(text: "Slider: ", style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+         $0.anchorAndSize(to: checkBoxComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
 }

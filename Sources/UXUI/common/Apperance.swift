@@ -1,5 +1,6 @@
 import Foundation
 /**
+ * A central location to store light/dark-mode value in macOS
  * - Fixme: ⚠️️ add support for catalina: https://stackoverflow.com/a/57429660/5389500
  * - Fixme: ⚠️️ make it react to os changes: https://github.com/ruiaureliano/macOS-Appearance/blob/master/Appearance/Source/AppDelegate.swift
  * - Note: article about the new auto mode: https://medium.com/@ruiaureliano/check-light-dark-appearance-for-macos-mojave-catalina-fb2343af875f

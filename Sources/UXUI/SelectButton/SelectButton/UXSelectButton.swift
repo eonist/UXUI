@@ -1,6 +1,8 @@
 import Foundation
 import QuartzCore
-
+/**
+ * A button that can have a selected state / style
+ */
 open class UXSelectButton: UXButton, Selectable {
    internal var styles: Styles
    open var selected: Bool {

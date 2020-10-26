@@ -2,6 +2,7 @@ import Foundation
 import With
 /**
  * SliderComponent
+ * - Fixme: ⚠️️ rename to ....Composite?
  * - Note: A label and a volumslider
  */
 open class SliderComponent: UXView {

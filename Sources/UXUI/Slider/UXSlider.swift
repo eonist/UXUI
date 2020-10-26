@@ -2,6 +2,7 @@ import Cocoa
 import QuartzCore
 import Spatial
 /**
+ * A slider (Has style and callback)
  * - Fixme: ⚠️️ Add support for thumb.size based on background height
  */
 open class UXSlider: UXView {
