@@ -1,5 +1,7 @@
 import Foundation
-
+/**
+ * A label and a text button
+ */
 open class TextButtonComponent: UXView {
    lazy var label: UXLabel = createLabel()
    public lazy var textButton: UXTextButton = createTextButton()

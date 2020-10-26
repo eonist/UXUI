@@ -1,6 +1,9 @@
 import Foundation
 import With
-
+/**
+ * SliderComponent
+ * - Note: A label and a volumslider
+ */
 open class SliderComponent: UXView {
    lazy var label: UXLabel = createLabel()
    lazy var slider: VolumeSlider = createSlider()

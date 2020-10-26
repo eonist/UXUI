@@ -5,7 +5,7 @@ import Foundation
 extension TextButtonComponent {
    public struct Style {
       let label: UXLabel.Style
-      let textButton: UXCheckBox.Styles
+      let textButton: UXTextButton.Style
    }
 }
 extension TextButtonComponent.Style {

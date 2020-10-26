@@ -1,6 +1,7 @@
 import Foundation
 /**
  * CheckBoxButton
+ * - Note: A label and a checkbox
  */
 open class CheckBoxComponent: UXView {
    lazy var label: UXLabel = createLabel()

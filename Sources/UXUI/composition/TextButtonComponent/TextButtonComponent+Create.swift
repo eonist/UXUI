@@ -3,6 +3,8 @@ import With
 import Spatial
 /**
  * Create
+ * - Fixme: ⚠️️ look into that ruler/guide code from the ios legacy project (stretch goal)
+ * - Fixme: ⚠️️ use spatial code from TextInput
  */
 extension TextButtonComponent {
    /**
@@ -14,14 +16,14 @@ extension TextButtonComponent {
          $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)
-         $0.anchorAndSize(to: self, multiplier: .init(width: 0.5, height: 1), offset: .init(x: 0, y: 0), sizeOffset: .init(width: 0, height: 0))
+         $0.anchorAndSize(to: self, multiplier: .init(width: 0.5, height: 1), offset: .zero, sizeOffset: .zero)
       }
    }
    /**
     * CheckBox
     */
    func createTextButton() -> UXTextButton {
-      with(.init(text: buttonText, style: style.button)) {
+      with(.init(text: buttonText, style: style.textButton)) {
          self.addSubview($0)
          $0.anchorAndSize(to: $0, align: .topLeft, alignTo: .topLeft, multiplier: .init(width: 0.5, height: 1))
          $0.anchorAndSize(to: self, height: 44, align: .centerCenter, alignTo: .centerCenter, sizeOffset: .init(width: -80, height: 0))
@@ -29,5 +31,3 @@ extension TextButtonComponent {
       }
    }
 }
-// 🏀 use spatial code from TextInput
-   // look into that ruler/guide code from the ios legacy project

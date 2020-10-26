@@ -2,6 +2,7 @@ import Cocoa
 /**
  * SwitchButton
  * - Abstract: On or off state (Looks like the classic switch toggle in iOS)
+ * - Note: A label and a switch
  */
 open class SwitchComponent: UXView {
    lazy var label: UXLabel = createLabel() // text lable
