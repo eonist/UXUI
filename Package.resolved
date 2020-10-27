@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Spatial",
+        "repositoryURL": "https://github.com/eonist/Spatial.git",
+        "state": {
+          "branch": "master",
+          "revision": "fad5757e409e562d3f84ef77263f5385b7cbf492",
+          "version": null
+        }
+      },
+      {
+        "package": "With",
+        "repositoryURL": "https://github.com/eonist/With.git",
+        "state": {
+          "branch": "master",
+          "revision": "db0935ecba9577470664105c25cf2c29481ec0fb",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
