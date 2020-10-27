@@ -45,7 +45,8 @@ extension View {
          // 👇 🏀
          // create example where you inline the composite uis, no need for creational methods
          // add padding to volume slider thumb, see switch padding 👈
-         // fix track in volumeslider missbehaving when resizing parent
+         // fix track in volumeslider missbehaving when resizing parent ✅
+         // add github actions 👌
    }
    /**
     * Label
