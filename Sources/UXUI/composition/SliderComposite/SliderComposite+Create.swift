@@ -2,12 +2,12 @@ import Foundation
 import With
 import Spatial
 
-extension SliderComponent {
+extension SliderComposite {
    /**
     * TextField
     */
    func createLabel() -> UXLabel {
-      with(.init(style: SliderComponent.Style.default.label)) {
+      with(.init(style: SliderComposite.Style.default.label)) {
          $0.text = self.text
          $0.textAlignment = .left
          $0.centerVertically()
@@ -22,10 +22,10 @@ extension SliderComponent {
     * Slider
     */
    func createSlider() -> VolumeSlider {
-      with(.init(axis: .hor, buttonSide: 44, progress: 0.5, style: SliderComponent.Style.default.slider)) {
+      with(.init(axis: .hor, buttonSide: 32, progress: 0.5, style: SliderComposite.Style.default.slider)) {
          self.addSubview($0)
 //         $0.anchorAndSize(to: self, height: 44, align: .topCenter, alignTo: .topCenter, offset: .init(x: 0, y: 44), sizeOffset: .init(width: -88, height: 0))
-         $0.anchorAndSize(to: self, height: 44, align: .topRight, alignTo: .topRight, multiplier: .init(width: 0.5, height: 1))
+         $0.anchorAndSize(to: self, align: .topRight, alignTo: .topRight, multiplier: .init(width: 0.5, height: 1))
          $0.onChange = { progress in
             Swift.print("progress:  \(progress)")
          }

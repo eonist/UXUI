@@ -2,7 +2,7 @@ import Foundation
 import With
 import Spatial
 
-extension SwitchComponent {
+extension SwitchComposite {
    /**
     * Creates the TextField
     */

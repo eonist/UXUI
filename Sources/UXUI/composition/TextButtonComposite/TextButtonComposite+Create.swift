@@ -6,7 +6,7 @@ import Spatial
  * - Fixme: ⚠️️ look into that ruler/guide code from the ios legacy project (stretch goal)
  * - Fixme: ⚠️️ use spatial code from TextInput
  */
-extension TextButtonComponent {
+extension TextButtonComposite {
    /**
     * TextField
     */

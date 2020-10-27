@@ -2,12 +2,12 @@ import Foundation
 import With
 import Spatial
 
-extension CheckBoxComponent {
+extension CheckBoxComposite {
    /**
     * TextField
     */
    func createLabel() -> UXLabel {
-      with(.init(style: CheckBoxComponent.Style.default.label)) {
+      with(.init(style: CheckBoxComposite.Style.default.label)) {
          $0.text = self.text
          $0.textAlignment = .left
          $0.centerVertically()
@@ -21,7 +21,7 @@ extension CheckBoxComponent {
     * CheckBox
     */
    func createCheckBox() -> UXCheckBox {
-      with(.init(selected: self.selected, styles: CheckBoxComponent.Style.default.checkBox, frame: .zero)) { // ToggleButton.init(isChecked:self.isChecked,texts:texts)
+      with(.init(selected: self.selected, styles: CheckBoxComposite.Style.default.checkBox, frame: .zero)) { // ToggleButton.init(isChecked:self.isChecked,texts:texts)
          self.addSubview($0)
          $0.anchor(to: self, align: .topRight, alignTo: .topRight)
          $0.size(to: self, axis: .ver, toAxis: .ver)

@@ -5,7 +5,7 @@ import Cocoa
  * - Note: A label and a switch
  *  - Fixme: ⚠️️ rename to ....Composite?
  */
-open class SwitchComponent: UXView {
+open class SwitchComposite: UXView {
    lazy var label: UXLabel = createLabel() // text lable
    public lazy var switcher: UXSwitch = createSwitch() // right switch
    let text: String // initial text

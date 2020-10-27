@@ -4,7 +4,7 @@ import Foundation
  * - Note: A label and a checkbox
  *  - Fixme: ⚠️️ rename to ....Composite?
  */
-open class CheckBoxComponent: UXView {
+open class CheckBoxComposite: UXView {
    lazy var label: UXLabel = createLabel()
    public lazy var checkBox: UXCheckBox = createCheckBox()
    let text: String

@@ -5,7 +5,7 @@ import With
  * - Fixme: ⚠️️ rename to ....Composite?
  * - Note: A label and a volumslider
  */
-open class SliderComponent: UXView {
+open class SliderComposite: UXView {
    lazy var label: UXLabel = createLabel()
    lazy var slider: VolumeSlider = createSlider()
    let text: String

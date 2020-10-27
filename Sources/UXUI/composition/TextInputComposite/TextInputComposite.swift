@@ -4,7 +4,7 @@ import Spatial
 /**
  * Label and TextInput
  */
-open class UXTextInput: UXView {
+open class TextInputComposite: UXView {
    lazy var label: UXLabel = createLabel() // text lable
    lazy var textInput: UXLabel = createInputText()
    let labelText: String
@@ -13,7 +13,7 @@ open class UXTextInput: UXView {
    /**
     * init
     */
-   public init(label: String = "Label", input: String = "Input", style: UXTextInput.Style = .default) {
+   public init(label: String = "Label", input: String = "Input", style: TextInputComposite.Style = .default) {
       self.labelText = label
       self.inputText = input
       self.style = style

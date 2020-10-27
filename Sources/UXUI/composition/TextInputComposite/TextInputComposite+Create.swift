@@ -2,14 +2,14 @@ import Foundation
 import With
 import Spatial
 
-extension UXTextInput {
+extension TextInputComposite {
    /**
     * label
     */
    func createLabel() -> UXLabel {
       with(.init()) {
-         $0.textColor = UXTextInput.Style.default.label.textColor
-         $0.font = UXTextInput.Style.default.label.font
+         $0.textColor = TextInputComposite.Style.default.label.textColor
+         $0.font = TextInputComposite.Style.default.label.font
          $0.text = self.labelText
          $0.textAlignment = .left
          $0.centerVertically()

@@ -1,6 +1,6 @@
 import Cocoa
 
-extension SwitchComponent {
+extension SwitchComposite {
    /**
     * Style
     */
@@ -12,6 +12,6 @@ extension SwitchComponent {
 /**
  * Const
  */
-extension SwitchComponent.Style {
-   public static let `default`: SwitchComponent.Style = .init(label: .default, switch: .default)
+extension SwitchComposite.Style {
+   public static let `default`: SwitchComposite.Style = .init(label: .default, switch: .default)
 }

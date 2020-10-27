@@ -3,7 +3,7 @@ import Foundation
  * A label and a text button
  *  - Fixme: ⚠️️ rename to ....Composite?
  */
-open class TextButtonComponent: UXView {
+open class TextButtonComposite: UXView {
    lazy var label: UXLabel = createLabel()
    public lazy var textButton: UXTextButton = createTextButton()
    let labelText: String

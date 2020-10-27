@@ -4,11 +4,11 @@ import Spatial
 
 open class View: UXView {
    lazy var label: UXLabel = creatLabel()
-   lazy var textInput: UXTextInput = createTextInput()
-   lazy var textButtonComponent: TextButtonComponent = createTextComponent()
-   lazy var switchComponent: SwitchComponent = createSwitchComponent()
-   lazy var checkBoxComponent: CheckBoxComponent = createCheckBoxComponent()
-   lazy var sliderComponent: SliderComponent = createSliderComponent()
+   lazy var textInput: TextInputComposite = createTextInput()
+   lazy var textButtonComponent: TextButtonComposite = createTextComponent()
+   lazy var switchComponent: SwitchComposite = createSwitchComponent()
+   lazy var checkBoxComponent: CheckBoxComposite = createCheckBoxComponent()
+   lazy var sliderComponent: SliderComposite = createSliderComponent()
    /**
     * Init
     * - Fixme: ⚠️️ add margins as global params etc
@@ -53,7 +53,7 @@ extension View {
    /**
     * TextInput
     */
-   func createTextInput() -> UXTextInput {
+   func createTextInput() -> TextInputComposite {
       with(.init(label: "Label", input: "input", style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: label, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
@@ -62,7 +62,7 @@ extension View {
    /**
     * TextComponent
     */
-   func createTextComponent() -> TextButtonComponent {
+   func createTextComponent() -> TextButtonComposite {
       with(.init(labelText: "Label", buttonText: "Button", style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: textInput, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
@@ -72,7 +72,7 @@ extension View {
     * Switch
     * - Fixme: ⚠️️ make 1.5x size, add border style etc
     */
-   func createSwitchComponent() -> SwitchComponent {
+   func createSwitchComponent() -> SwitchComposite {
       with(.init(text: "Toggle: ", selected: false, style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
@@ -82,7 +82,7 @@ extension View {
     * CheckBoxComponent
     * - Fixme: ⚠️️ Add some padding to the inner graphic, use dark gray
     */
-   func createCheckBoxComponent() -> CheckBoxComponent {
+   func createCheckBoxComponent() -> CheckBoxComposite {
       with(.init(text: "CheckBox: ", selected: false, style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
@@ -91,7 +91,7 @@ extension View {
    /**
     * SliderComponent
     */
-   func createSliderComponent() -> SliderComponent {
+   func createSliderComponent() -> SliderComposite {
       with(.init(text: "Slider: ", style: .default)) {
          self.addSubview($0)
          $0.anchorAndSize(to: checkBoxComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
