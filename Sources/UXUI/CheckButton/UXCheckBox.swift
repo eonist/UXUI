@@ -8,16 +8,18 @@ import QuartzCore
  * btn.selected = true
  */
 open class UXCheckBox: UXButton, Selectable {
+   public lazy var foreground: VolumeSlider.RoundedThumb = createForeground()
    open var selected: Bool {
       didSet {
          self.checkButtonStyle = selected ? styles.active : styles.inActive
+         foreground.layer?.backgroundColor = self.checkButtonStyle.foregroundColor.cgColor
       }
    }
    internal var styles: UXCheckBox.Styles
    internal var checkButtonStyle: UXCheckBox.Style { // backgroundColor, borderColor, textColor
       didSet {
          self.layer?.borderWidth = 1
-         self.layer?.borderColor = checkButtonStyle.borderColor.cgColor
+         self.layer?.backgroundColor = checkButtonStyle.foregroundColor.cgColor
          self.layer?.backgroundColor = checkButtonStyle.backgroundColor.cgColor
       }
    }
@@ -33,6 +35,7 @@ open class UXCheckBox: UXButton, Selectable {
       self.styles = styles
       self.checkButtonStyle = selected ? styles.active : styles.inActive
       super.init(style: checkButtonStyle.buttonStyle, frame: frame)
+      _ = foreground
       // Styling
       _ = { self.checkButtonStyle = self.checkButtonStyle }() // hack
    }

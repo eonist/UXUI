@@ -28,6 +28,7 @@ public class SwitchForeground: UXView, ConstraintKind {
 extension SwitchForeground {
    /**
     * - Note: This is the only place to get frame.height consistently (when you use either AutoLayout or CGRect based layout)
+    * - Fixme: ⚠️️ Maybe make this a style property, isRound etc? or corner radius
     */
    override open func layout() {
       super.layout()

@@ -3,6 +3,7 @@ import Spatial
 import QuartzCore
 /**
  * Switch for macOS (macos doesnt have this, like ios has)
+ * - Fixme: ⚠️️ rename to UXToggle? or be consistent with iOS?
  * - Fixme: ⚠️️ Add ability to add stroke?
  * - Fixme: ⚠️️ Add ability to use 1.5x width?
  * - Fixme: ⚠️️ Add ability to drag? see legacy project for code etc

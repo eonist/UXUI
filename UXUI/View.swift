@@ -42,7 +42,7 @@ extension View {
       uis.distributeAndSize(dir: .ver, height: 32, spacing: 24, offset: .init(x: 24, y: 24), sizeOffset: .init(width: -44, height: 0))
       // continue here:
          // add cgpoint based offset to distribute in spatial ✅
-         // 👇 🏀
+         // 👇👇👇 🏀
          // create example where you inline the composite uis, no need for creational methods
          // add padding to volume slider thumb, see switch padding 👈
          // fix track in volumeslider missbehaving when resizing parent ✅
