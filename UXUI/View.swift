@@ -47,6 +47,10 @@ extension View {
          // add padding to volume slider thumb, see switch padding 👈
          // fix track in volumeslider missbehaving when resizing parent ✅
          // add github actions 👌
+         // make UXUI logo
+         // make nice readme
+         // add darkmode support
+         // fix thumb in slider missbehaving on dragging track
    }
    /**
     * Label

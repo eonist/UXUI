@@ -24,6 +24,7 @@ extension UXSlider {
     * - Parameter p: position of the mouse on the track
     */
    open func onBackgroundDown(p: CGPoint) {
+      tempThumbMousePos = .init(x: button.frame.width / 2, y: button.frame.height / 2)
       onButtonMove(p: p) // Replay - only needed for mac really ⚠️️
    }
    /**

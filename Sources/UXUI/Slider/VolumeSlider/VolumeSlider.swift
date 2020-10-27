@@ -32,4 +32,3 @@ public class VolumeSlider: UXSlider {
       }
    }
 }
-// continue here: 🏀 debug why columslider isnt being displayed
