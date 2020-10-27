@@ -1,7 +1,9 @@
 import Cocoa
 import With
 import Spatial
-
+/**
+ * Sandbox for UI-Components
+ */
 open class View: UXView {
    lazy var label: UXLabel = creatLabel()
    lazy var textInput: TextInputComposite = createTextInput()
@@ -36,6 +38,12 @@ extension View {
       _ = switchComponent
       _ = checkBoxComponent
       _ = sliderComponent
+      let uis = [label, textInput, textButtonComponent, switchComponent, checkBoxComponent, sliderComponent]
+      uis.distributeAndSize(dir: .ver, height: 32, spacing: 24, offset: 24, sizeOffset: .init(width: -44, height: 0))
+      // continue here: 🏀
+         // add cgpoint based offset to distribute in spatial
+         // create example where you inline the composite uis, no need for creational methods
+         // add padding to volume slider thumb, see switch padding
    }
    /**
     * Label
@@ -47,7 +55,7 @@ extension View {
          $0.text = "Hello world"
          self.addSubview($0)
          $0.centerVertically()
-         $0.anchorAndSize(to: self, height: 24, offset: .init(x: 20, y: 20), sizeOffset: .init(width: -40, height: 0))
+//         $0.anchorAndSize(to: self, height: 24, offset: .init(x: 20, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
    /**
@@ -56,7 +64,7 @@ extension View {
    func createTextInput() -> TextInputComposite {
       with(.init(label: "Label", input: "input", style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: label, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+//         $0.anchorAndSize(to: label, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
    /**
@@ -65,7 +73,7 @@ extension View {
    func createTextComponent() -> TextButtonComposite {
       with(.init(labelText: "Label", buttonText: "Button", style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: textInput, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+//         $0.anchorAndSize(to: textInput, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
    /**
@@ -75,7 +83,7 @@ extension View {
    func createSwitchComponent() -> SwitchComposite {
       with(.init(text: "Toggle: ", selected: false, style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+//         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
    /**
@@ -85,7 +93,7 @@ extension View {
    func createCheckBoxComponent() -> CheckBoxComposite {
       with(.init(text: "CheckBox: ", selected: false, style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+//         $0.anchorAndSize(to: switchComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
    /**
@@ -94,7 +102,7 @@ extension View {
    func createSliderComponent() -> SliderComposite {
       with(.init(text: "Slider: ", style: .default)) {
          self.addSubview($0)
-         $0.anchorAndSize(to: checkBoxComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
+//         $0.anchorAndSize(to: checkBoxComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
 }
