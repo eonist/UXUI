@@ -2,8 +2,8 @@ import Cocoa
 
 extension UXSlider {
    public struct Style {
-      public let thumbColor: NSColor
-      public let trackColor: NSColor
+      public let thumbColor: NSColor // the dragable element
+      public let trackColor: NSColor // the background (also detects movment)
    }
 }
 extension UXSlider.Style {
