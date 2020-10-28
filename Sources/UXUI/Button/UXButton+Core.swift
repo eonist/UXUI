@@ -5,6 +5,7 @@ extension UXButton {
    /**
     * - Note: This is the only place to get frame.height consistently (when you use either AutoLayout or CGRect based layout)
     * - Note: Universal method for getting frame consistently acrross ios and macos when using autolayout
+    * - Note: called when macOS apperance changes
     * - Fixme: ⚠️️ Add support for custom cornerRadius
     */
    override open func layout() {

@@ -53,7 +53,8 @@ extension View {
       // continue here:
          // add darkmode support 👈👈 🏀
             // add apperance change detector ✅
-            // research darkmode custom look for macos best practice 👈
+            // research darkmode custom look for macos best practice ✅
+            // add support for macos in darkmode repo 👈
          // add background to textinput? ✅
          // make UXUI logo
          // make nice readme

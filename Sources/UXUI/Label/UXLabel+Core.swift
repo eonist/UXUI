@@ -48,8 +48,10 @@ extension UXLabel {
    }
    /**
     * Need to get rid of border in the cell (border is hard to get rid of otherwise)
+    * - Note: called when macOS apperance changes
     */
    open override func draw(_ dirtyRect: NSRect) {
+//      Swift.print("UXLabel.draw")
       super.cell?.drawInterior(withFrame: dirtyRect, in: self)
       self.layer?.backgroundColor = self.style.backgroundColor.cgColor// NSColor.green.cgColor// self.backgroundColor?.cgColor
    }

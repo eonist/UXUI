@@ -11,10 +11,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    func applicationDidFinishLaunching(_ aNotification: Notification) {
       _ = view
       let apperance = Apperance.init()
-      Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
+//      Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
       ChangeDetector.activateChangeCallback()
       ChangeDetector.onInterfaceChange = {
-         Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
+//         Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
       }
    }
 }
