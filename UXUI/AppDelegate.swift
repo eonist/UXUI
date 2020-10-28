@@ -11,6 +11,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    func applicationDidFinishLaunching(_ aNotification: Notification) {
       _ = view
       let apperance = Apperance.init()
+      _ = apperance
 //      Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
       ChangeDetector.activateChangeCallback()
       ChangeDetector.onInterfaceChange = {
@@ -25,7 +26,7 @@ extension AppDelegate {
    func createView() -> View {
       with(.init(frame: window.contentRect(forFrameRect: window.frame))) {
          window.contentView = $0
-         $0.layer?.backgroundColor = NSColor.white.cgColor
+//         $0.layer?.backgroundColor = NSColor.white.cgColor
       }
    }
    

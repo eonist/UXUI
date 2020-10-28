@@ -19,6 +19,7 @@ open class View: UXView {
       super.init(frame: frame)
       Swift.print("Hello world")
       self.wantsLayer = true // if true then view is layer backed
+      self.layer?.backgroundColor = Theme.Background.tertiary.cgColor
       createUI()
    }
 }
@@ -56,6 +57,7 @@ extension View {
             // research darkmode custom look for macos best practice ✅
             // add support for macos in darkmode repo 👈
          // add background to textinput? ✅
+         // add linters
          // make UXUI logo
          // make nice readme
          // add github actions 👌
