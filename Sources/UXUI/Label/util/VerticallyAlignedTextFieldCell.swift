@@ -14,12 +14,17 @@ class VerticallyAlignedTextFieldCell: NSTextFieldCell {
    init(textHeight: CGFloat, textCell string: String) {
       self.textHeight = textHeight
       super.init(textCell: string)
+//      self.backgroundColor = .green
+//      self.drawsBackground = true
+      self.isBordered = true
+//      self.border
    }
    /**
     * - Fixme: ⚠️️ write doc
+    * - Note: the -3px part is a small fix, seems like if fontsize is 20, the height is 23 etc
     */
    override func drawingRect(forBounds rect: NSRect) -> NSRect {
-      let newRect: NSRect = .init(x: 0, y: (rect.size.height - textHeight) / 2, width: rect.size.width, height: rect.size.height)
+      let newRect: NSRect = .init(x: 0, y: ((rect.size.height - textHeight) / 2) - 3, width: rect.size.width, height: rect.size.height - 3)
       return super.drawingRect(forBounds: newRect)
    }
    /**

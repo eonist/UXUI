@@ -47,10 +47,12 @@ extension View {
          // add padding to volume slider thumb, see switch padding ✅
          // fix track in volumeslider missbehaving when resizing parent ✅
          // add github actions 👌
+         // fix UXLabel ✅
          // make UXUI logo
          // make nice readme
          // add darkmode support
          // fix thumb in slider missbehaving on dragging track ✅
+         // make textbutton have a background color instead of border? 👈
    }
    /**
     * Label
@@ -69,7 +71,7 @@ extension View {
     * TextInput
     */
    func createTextInput() -> TextInputComposite {
-      with(.init(label: "Input", input: "data", style: .default)) {
+      with(.init(label: "TextInput", input: "data", style: .default)) {
          self.addSubview($0)
 //         $0.anchorAndSize(to: label, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }

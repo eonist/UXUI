@@ -12,17 +12,20 @@ extension UXLabel {
       public let textAlignment: NSTextAlignment
       public let centerVertically: Bool
       public let backgroundColor: NSColor
-      public let isBordered: Bool
+      public let isBordered: Bool // this avoids text jumping when editable is true, doesnt show border
    }
-}
-extension UXLabel.Style {
-   public static var `default`: UXLabel.Style {
-      .init(textColor: .black, font: .systemFont(ofSize: 20), textAlignment: .left, centerVertically: true, backgroundColor: .clear, isBordered: false)
-   }
-   public static var alternate: UXLabel.Style = .default
 }
 /**
- * Style
+ * Styles
+ */
+extension UXLabel.Style {
+   public static var `default`: UXLabel.Style {
+      .init(textColor: .black, font: .systemFont(ofSize: 20), textAlignment: .left, centerVertically: true, backgroundColor: .clear, isBordered: true)
+   }
+   public static var alternate: UXLabel.Style = .default // ⚠️️ same as default?
+}
+/**
+ * Setter
  */
 extension UXLabel {
    /**
@@ -37,6 +40,11 @@ extension UXLabel {
       self.textAlignment = style.textAlignment
       centerVertically()
    }
+}
+/**
+ * Init
+ */
+extension UXLabel {
    /**
     * Init with style
     */

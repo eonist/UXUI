@@ -7,6 +7,8 @@ import Cocoa
  * - Note: Supports center-aligned text
  * - Note: Same functionality as UILabel
  * - Note: Supports AutoLayout
+ * - Fixme: ⚠️️ add placeholder text, paragraph style: https://medium.com/bpxl-craft/styling-nstextfield-a-guide-for-designers-8280da794263
+ * - Fixme: ⚠️️ not showing cursor blink
  */
 open class UXLabel: NSTextField {
    /**
@@ -17,7 +19,9 @@ open class UXLabel: NSTextField {
       self.isBezeled = false
       self.drawsBackground = false
       self.isEditable = false
+      self.isBordered = true // this avoids text jumping when editable is true
       self.isSelectable = false
+      self.focusRingType = .none // removes default glowing border
    }
    /**
     * Boilerplate
