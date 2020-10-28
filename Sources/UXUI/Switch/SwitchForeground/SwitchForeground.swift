@@ -2,25 +2,13 @@ import Cocoa
 import Spatial
 import QuartzCore
 
-public class SwitchForeground: UXView, ConstraintKind {
+public class SwitchForeground: UXLayerView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
     */
    public var anchor: (x: NSLayoutConstraint, y: NSLayoutConstraint)?
    public var size: (w: NSLayoutConstraint, h: NSLayoutConstraint)?
-   /**
-    * - Parameters:
-    *   - backgroundColor: the background color of the switch-foreground
-    *   - frame: Initial size and position of the frame
-    */
-   init(backgroundColor: NSColor, frame: CGRect) {
-      super.init(frame: frame)
-      self.wantsLayer = true // If true then view is layer backed
-//      self.layer?.backgroundColor = backgroundColor.cgColor
-      self.layer?.rasterizationScale = 2.0 * NSScreen.main!.backingScaleFactor
-      self.layer?.shouldRasterize = true
-   }
 }
 /**
  * Core

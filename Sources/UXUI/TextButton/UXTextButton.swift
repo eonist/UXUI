@@ -10,7 +10,7 @@ open class UXTextButton: UXButton {
    var textButtonStyle: UXTextButton.Style {
       didSet {
          super.style = textButtonStyle.button
-         textLabel.setStyle(style: textButtonStyle.label)//textColor = textButtonStyle.label.textColor
+         textLabel.setStyle(style: textButtonStyle.label) // textColor = textButtonStyle.label.textColor
       }
    }
    internal var text: String // Text

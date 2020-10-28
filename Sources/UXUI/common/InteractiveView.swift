@@ -4,7 +4,7 @@ import Spatial
  * - Note: Used by VolumSlider component
  * - Fixme: ⚠️️ Probably rename to onMoveCallback, or move, or moveCallBack et
  */
-open class InteractiveView: UXView, ConstraintKind {
+open class InteractiveView: UXLayerView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them

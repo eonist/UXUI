@@ -42,7 +42,7 @@ extension View {
       uis.distributeAndSize(dir: .ver, height: 32, spacing: 24, offset: .init(x: 24, y: 24), sizeOffset: .init(width: -44, height: 0))
       // continue here:
          // add cgpoint based offset to distribute in spatial ✅
-         // 👇👇👇 🏀
+         // 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇 🏀
          // create example where you inline the composite uis, no need for creational methods
          // add padding to volume slider thumb, see switch padding ✅
          // fix track in volumeslider missbehaving when resizing parent ✅
@@ -50,15 +50,15 @@ extension View {
          // fix UXLabel ✅
          // make UXUI logo
          // make nice readme
-         // add darkmode support
+         // add darkmode support 👈👈
          // fix thumb in slider missbehaving on dragging track ✅
-         // make textbutton have a background color instead of border? 👈
+         // make textbutton have a background color instead of border? 👈👈👈
    }
    /**
     * Label
     */
    func creatLabel() -> UXLabel {
-      with(.init(text: "Label", style: .default)) {
+      with(.init(text: "TextLabel", style: .default)) {
 //         $0.textColor = .black
 //         $0.textAlignment = .left
 //         $0.text = "Hello world"
@@ -71,7 +71,7 @@ extension View {
     * TextInput
     */
    func createTextInput() -> TextInputComposite {
-      with(.init(label: "TextInput", input: "data", style: .default)) {
+      with(.init(label: "TextInput", input: "text here", style: .default)) {
          self.addSubview($0)
 //         $0.anchorAndSize(to: label, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
@@ -90,7 +90,7 @@ extension View {
     * - Fixme: ⚠️️ make 1.5x size, add border style etc
     */
    func createSwitchComponent() -> SwitchComposite {
-      with(.init(text: "Toggle: ", selected: false, style: .default)) {
+      with(.init(text: "Switch: ", selected: false, style: .default)) {
          self.addSubview($0)
 //         $0.anchorAndSize(to: textButtonComponent, sizeTo: self, height: 32, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }

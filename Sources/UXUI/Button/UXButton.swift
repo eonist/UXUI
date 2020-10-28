@@ -9,7 +9,7 @@ import Cocoa
  * view.addSubview(btn)
  * btn.tapUpInsideCallBack = { Swift.print("🎉") }
  */
-open class UXButton: UXView, ConstraintKind {
+open class UXButton: UXLayerView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
@@ -36,8 +36,5 @@ open class UXButton: UXView, ConstraintKind {
    public init(style: UXButton.Style = .default, frame: CGRect = .zero) {
       self.style = style
       super.init(frame: frame)
-      self.wantsLayer = true // If true then view is layer backed
-      self.layer?.rasterizationScale = 2.0 * NSScreen.main!.backingScaleFactor
-      self.layer?.shouldRasterize = true
    }
 }

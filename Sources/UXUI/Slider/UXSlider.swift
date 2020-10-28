@@ -4,6 +4,7 @@ import Spatial
 /**
  * A slider (Has style and callback)
  * - Fixme: ⚠️️ Add support for thumb.size based on background height
+ * - Fixme: ⚠️️ for some reason this cant be UXLayerView
  */
 open class UXSlider: UXView {
    public var onChange: OnChange = defaultOnChange
