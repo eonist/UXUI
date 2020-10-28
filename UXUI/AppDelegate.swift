@@ -10,6 +10,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    lazy var view: NSView = createView()
    func applicationDidFinishLaunching(_ aNotification: Notification) {
       _ = view
+      let apperance = Apperance.init()
+      Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
    }
 }
 extension AppDelegate {

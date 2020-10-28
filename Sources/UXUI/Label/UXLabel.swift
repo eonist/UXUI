@@ -20,9 +20,10 @@ open class UXLabel: NSTextField {
       self.isBezeled = false
       self.drawsBackground = false
       self.isEditable = false
-      self.isBordered = true // this avoids text jumping when editable is true
       self.isSelectable = false
       self.focusRingType = .none // removes default glowing border
+//      self.wantsLayer = true;
+//      self.layer?.borderWidth = 2;
    }
    /**
     * Boilerplate

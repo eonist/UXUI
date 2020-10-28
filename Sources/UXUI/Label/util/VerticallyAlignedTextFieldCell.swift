@@ -14,9 +14,9 @@ class VerticallyAlignedTextFieldCell: NSTextFieldCell {
    init(textHeight: CGFloat, textCell string: String) {
       self.textHeight = textHeight
       super.init(textCell: string)
-//      self.backgroundColor = .green
-//      self.drawsBackground = true
-      self.isBordered = true
+      self.backgroundColor = .green
+      self.drawsBackground = false
+//      self.isBordered = true
 //      self.border
    }
    /**

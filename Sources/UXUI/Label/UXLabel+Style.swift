@@ -36,6 +36,8 @@ extension UXLabel {
       self.backgroundColor = style.backgroundColor
       self.font = style.font
       self.isBordered = style.isBordered
+      self.layer?.borderColor = NSColor.green.cgColor
+      self.backgroundColor = NSColor.blue
       self.textColor = style.textColor
       self.textAlignment = style.textAlignment
       centerVertically()
@@ -51,6 +53,7 @@ extension UXLabel {
    public convenience init(text: String, style: UXLabel.Style = .default) {
       self.init(frame: .zero)
       self.text = text
+      self.isBordered = style.isBordered // this avoids text jumping when editable is true
       setStyle(style: style)
    }
 }

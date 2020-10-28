@@ -51,11 +51,11 @@ extension View {
          Swift.print("slider.progress: \($0)")
       }
       // continue here:
-         // add github actions 👌
+         // add darkmode support 👈👈
          // make UXUI logo
          // make nice readme
-         // add darkmode support 👈👈
-         // add UI event listeners 👈
+         // add github actions 👌
+         // add UI event listeners ✅
    }
 }
 
