@@ -13,7 +13,7 @@ extension TextInputComposite {
          self.addSubview($0)
          $0.size(to: self, axis: .ver, toAxis: .ver)
          $0.anchor(to: self)
-         $0.anchor(to: self.textInput, align: .topRight, alignTo: .topLeft)
+         $0.anchor(to: self.input, align: .topRight, alignTo: .topLeft)
       }
    }
    /**

@@ -35,6 +35,10 @@ extension View {
       let uis = [label, textInput, textButtonComponent, switchComponent, checkBoxComponent, sliderComponent]
       uis.forEach { self.addSubview($0) }
       uis.distributeAndSize(dir: .ver, height: 32, spacing: 24, offset: .init(x: 24, y: 24), sizeOffset: .init(width: -44, height: 0))
+      textInput.input.onTextFieldChange = {
+         guard let txt = self.textInput.input.text else { return }
+         Swift.print("txt:  \(txt)")
+      }
       // continue here:
          // add github actions 👌
          // make UXUI logo
@@ -43,6 +47,4 @@ extension View {
          // add UI event listeners 👈
    }
 }
-extension View {
-   
-}
+
