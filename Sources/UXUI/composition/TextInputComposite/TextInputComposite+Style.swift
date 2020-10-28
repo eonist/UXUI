@@ -1,4 +1,4 @@
-import Foundation
+import Cocoa
 /**
  * Style
  */
@@ -12,5 +12,9 @@ extension TextInputComposite {
  * Style const
  */
 extension TextInputComposite.Style {
-   public static let `default`: TextInputComposite.Style = .init(label: .default, input: .default)
+   public static let `default`: TextInputComposite.Style = {
+      let defaultStyle: UXLabel.Style = .default
+      let input: UXLabel.Style = .init(textColor: defaultStyle.textColor, font: defaultStyle.font, textAlignment: defaultStyle.textAlignment, centerVertically: defaultStyle.centerVertically, backgroundColor: NSColor.lightGray, isBordered: defaultStyle.isBordered)
+      return .init(label: .default, input: input)
+   }()
 }

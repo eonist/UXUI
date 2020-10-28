@@ -51,7 +51,8 @@ extension View {
          Swift.print("slider.progress: \($0)")
       }
       // continue here:
-         // add darkmode support 👈👈
+         // add darkmode support 👈👈 🏀
+         // add background to textinput?
          // make UXUI logo
          // make nice readme
          // add github actions 👌

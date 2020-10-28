@@ -51,6 +51,6 @@ extension UXLabel {
     */
    open override func draw(_ dirtyRect: NSRect) {
       super.cell?.drawInterior(withFrame: dirtyRect, in: self)
-      //      self.layer?.backgroundColor = NSColor.clear.cgColor
+      self.layer?.backgroundColor = self.style.backgroundColor.cgColor// NSColor.green.cgColor// self.backgroundColor?.cgColor
    }
 }

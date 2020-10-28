@@ -11,6 +11,7 @@ import Cocoa
  * - Fixme: ⚠️️ not showing cursor blink
  */
 open class UXLabel: NSTextField {
+   var style: Style = .default
    var onTextFieldChange: OnTextFieldChange = defaultOnTextFieldChange // callback
    /**
     * - Parameter frameRect: size of label if not using auto-layout
@@ -22,7 +23,6 @@ open class UXLabel: NSTextField {
       self.isEditable = false
       self.isSelectable = false
       self.focusRingType = .none // removes default glowing border
-//      self.wantsLayer = true;
 //      self.layer?.borderWidth = 2;
    }
    /**
