@@ -12,6 +12,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       _ = view
       let apperance = Apperance.init()
       Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
+      ChangeDetector.activateChangeCallback()
+      ChangeDetector.onInterfaceChange = {
+         Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
+      }
    }
 }
 extension AppDelegate {
@@ -24,4 +28,5 @@ extension AppDelegate {
          $0.layer?.backgroundColor = NSColor.white.cgColor
       }
    }
+   
 }

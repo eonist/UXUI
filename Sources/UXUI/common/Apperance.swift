@@ -25,3 +25,30 @@ extension Apperance {
       }
    }
 }
+/**
+ * Detect dark mode change
+ */
+final public class ChangeDetector {
+   public static var onInterfaceChange: () -> Void = {}
+   /**
+    * Detect dark mode change
+    */
+   public static func activateChangeCallback() {
+      // Detect dark mode change
+      DistributedNotificationCenter.default.addObserver(self, selector: #selector(interfaceModeChanged), name: .AppleInterfaceThemeChangedNotification, object: nil)
+   }
+   /**
+    * Detect dark mode change
+    */
+   @objc static func interfaceModeChanged() {
+      // Do stuff.
+//      Swift.print("interface changed")
+      onInterfaceChange()
+   }
+}
+/**
+ * Needed for darkmode support
+ */
+extension Notification.Name {
+   static let AppleInterfaceThemeChangedNotification = Notification.Name("AppleInterfaceThemeChangedNotification")
+}
