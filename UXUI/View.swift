@@ -5,12 +5,12 @@ import Spatial
  * Sandbox for UI-Components
  */
 open class View: UXView {
-   lazy var label: UXLabel = UXLabel(text: "TextLabel", style: .default)
-   lazy var textInput: TextInputComposite = TextInputComposite(label: "TextInput", input: "text here", style: .default)
-   lazy var textButtonComponent: TextButtonComposite = TextButtonComposite(labelText: "TextButton", buttonText: "Button", style: .default)
-   lazy var switchComponent: SwitchComposite = SwitchComposite(text: "Switch: ", selected: false, style: .default)
-   lazy var checkBoxComponent: CheckBoxComposite = CheckBoxComposite(text: "CheckBox: ", selected: false, style: .default)
-   lazy var sliderComponent: SliderComposite = SliderComposite(text: "Slider: ", style: .default)
+   lazy var label: UXLabel = .init(text: "TextLabel", style: .default)
+   lazy var textInput: TextInputComposite = .init(label: "TextInput", input: "text here", style: .default)
+   lazy var textButtonComponent: TextButtonComposite = .init(labelText: "TextButton", buttonText: "Button", style: .default)
+   lazy var switchComponent: SwitchComposite = .init(text: "Switch: ", selected: false, style: .default)
+   lazy var checkBoxComponent: CheckBoxComposite = .init(text: "CheckBox: ", selected: false, style: .default)
+   lazy var sliderComponent: SliderComposite = .init(text: "Slider: ", style: .default)
    /**
     * Init
     * - Fixme: ⚠️️ add margins as global params etc
@@ -35,9 +35,20 @@ extension View {
       let uis = [label, textInput, textButtonComponent, switchComponent, checkBoxComponent, sliderComponent]
       uis.forEach { self.addSubview($0) }
       uis.distributeAndSize(dir: .ver, height: 32, spacing: 24, offset: .init(x: 24, y: 24), sizeOffset: .init(width: -44, height: 0))
-      textInput.input.onTextFieldChange = {
-         guard let txt = self.textInput.input.text else { return }
-         Swift.print("txt:  \(txt)")
+      textInput.inputLabel.onTextFieldChange = {
+         Swift.print("txt:  \(String(describing: self.textInput.inputLabel.text))")
+      }
+      textButtonComponent.textButton.upInsideCallBack = {
+         Swift.print("button clicked")
+      }
+      switchComponent.switcher.upInsideCallBack = {
+         Swift.print("IsOn:  \(self.switchComponent.switcher.selected)")
+      }
+      checkBoxComponent.checkBox.upInsideCallBack = {
+         Swift.print("isChecked: \(self.checkBoxComponent.checkBox.selected)")
+      }
+      sliderComponent.slider.onChange = {
+         Swift.print("slider.progress: \($0)")
       }
       // continue here:
          // add github actions 👌

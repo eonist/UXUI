@@ -5,8 +5,8 @@ import Spatial
  * Label and TextInput
  */
 open class TextInputComposite: UXView {
-   lazy var text: UXLabel = createLabel() // text lable
-   lazy var input: UXLabel = createInputText()
+   lazy var textLabel: UXLabel = createLabel() // text lable
+   lazy var inputLabel: UXLabel = createInputText()
    let labelText: String
    let inputText: String
    let style: Style
@@ -18,7 +18,7 @@ open class TextInputComposite: UXView {
       self.inputText = input
       self.style = style
       super.init(frame: .zero)
-      _ = self.text
+      _ = self.textLabel
       _ = input
    }
 }

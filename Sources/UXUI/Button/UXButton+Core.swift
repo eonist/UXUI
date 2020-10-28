@@ -1,4 +1,5 @@
 import Cocoa
+import With
 
 extension UXButton {
    /**
@@ -8,9 +9,11 @@ extension UXButton {
     */
    override open func layout() {
       super.layout()
-      self.layer?.cornerRadius = style.isRounded ? frame.height / style.cornerRadius : self.layer?.cornerRadius ?? 0
-      self.layer?.borderColor = style.borderColor.cgColor
-      self.layer?.backgroundColor = style.backgroundColor.cgColor
-      self.layer?.borderWidth = style.borderWidth
+      with(self.layer) {
+         $0?.cornerRadius = style.isRounded ? frame.height / style.cornerRadius : self.layer?.cornerRadius ?? 0
+         $0?.borderColor = style.borderColor.cgColor
+         $0?.backgroundColor = style.backgroundColor.cgColor
+         $0?.borderWidth = style.borderWidth
+      }
    }
 }
