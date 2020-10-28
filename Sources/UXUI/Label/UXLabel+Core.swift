@@ -44,14 +44,3 @@ extension UXLabel {
       Swift.print("self.isBordered:  \(self.isBordered)")
    }
 }
-//   open override var cell: NSCell? {get{Swift.print("cell");return super.cell}set{super.cell = newValue}}
-//   open override func drawCell(_ cell: NSCell) {
-//      Swift.print("drawCell")
-//      super.drawCell(cell)
-//   }
-//⚠️️ it could be more resonable to add nstextfield to an nsview and use the bellow
-//      #if os(macOS) /*Start - vertically center, applies only for macOS*/
-//      let textHeight = label.attributedStringValue.size().height
-//      let y: CGFloat = (frame.size.height / 2)  - (textHeight / 2)
-//      label.frame.origin.y = y
-//      #endif/*End*/
