@@ -30,6 +30,6 @@ extension UXSwitch {
  */
 extension UXSwitch.Styles {
    public static let `default`: UXSwitch.Styles = .init(selected: selected, unSelected: unSelected)
-   public static let selected: UXSwitch.SwitchStyle = .init(foregroundColor: .gray, backgroundColor: .lightGray)
-   public static let unSelected: UXSwitch.SwitchStyle = .init(foregroundColor: .lightGray, backgroundColor: .gray)
+   public static let selected: UXSwitch.SwitchStyle = .init(foregroundColor: .darkGray, backgroundColor: .lightGray)
+   public static let unSelected: UXSwitch.SwitchStyle = .init(foregroundColor: .gray, backgroundColor: .lightGray)
 }

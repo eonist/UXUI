@@ -7,10 +7,9 @@ extension TextInputComposite {
     * label
     */
    func createLabel() -> UXLabel {
-      with(.init()) {
+      with(.init(text: self.labelText)) {
          $0.textColor = TextInputComposite.Style.default.label.textColor
          $0.font = TextInputComposite.Style.default.label.font
-         $0.text = self.labelText
          $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)
@@ -23,8 +22,7 @@ extension TextInputComposite {
     * text-input
     */
    func createInputText() -> UXLabel {
-      with(.init(style: style.input)) {
-         $0.text = inputText
+      with(.init(text: inputText, style: style.input)) {
          $0.textAlignment = .left
          $0.centerVertically()
          addSubview($0)

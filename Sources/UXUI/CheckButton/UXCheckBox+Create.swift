@@ -9,7 +9,7 @@ extension UXCheckBox {
     * SwitchForeground
     * - Note: the background is in the button
     */
-   func createForeground() -> VolumeSlider.RoundedThumb {
+   func createForeground() -> UXCheckBox.Foreground {
       with(.init()) {
          addSubview($0)
          $0.layer?.backgroundColor = checkButtonStyle.foregroundColor.cgColor

@@ -11,8 +11,7 @@ extension TextButtonComposite {
     * TextField
     */
    func createLabel() -> UXLabel {
-      with(.init(style: style.label)) {
-         $0.text = labelText
+      with(.init(text: labelText, style: style.label)) {
          $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)

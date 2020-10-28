@@ -17,7 +17,7 @@ extension UXLabel {
 }
 extension UXLabel.Style {
    public static var `default`: UXLabel.Style {
-      .init(textColor: .black, font: .systemFont(ofSize: 20), textAlignment: .center, centerVertically: true, backgroundColor: .clear, isBordered: false)
+      .init(textColor: .black, font: .systemFont(ofSize: 20), textAlignment: .left, centerVertically: true, backgroundColor: .clear, isBordered: false)
    }
    public static var alternate: UXLabel.Style = .default
 }
@@ -40,8 +40,9 @@ extension UXLabel {
    /**
     * Init with style
     */
-   public convenience init(style: UXLabel.Style = .default) {
+   public convenience init(text: String, style: UXLabel.Style = .default) {
       self.init(frame: .zero)
+      self.text = text
       setStyle(style: style)
    }
 }

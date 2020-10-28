@@ -12,7 +12,7 @@ open class TextButtonComposite: UXView {
    /**
     * Initiate
     */
-   public init(labelText: String = "Label", buttonText: String = "TextButton", style: Style = .default) {
+   public init(labelText: String = "TextButton", buttonText: String = "Button", style: Style = .default) {
       self.labelText = labelText
       self.buttonText = buttonText
       self.style = style

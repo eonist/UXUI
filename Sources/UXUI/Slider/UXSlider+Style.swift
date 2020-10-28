@@ -7,5 +7,5 @@ extension UXSlider {
    }
 }
 extension UXSlider.Style {
-   public static let `default`: UXSlider.Style = .init(thumbColor: .lightGray, trackColor: .gray)
+   public static let `default`: UXSlider.Style = .init(thumbColor: .gray, trackColor: .lightGray)
 }

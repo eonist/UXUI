@@ -7,8 +7,7 @@ extension SwitchComposite {
     * Creates the TextField
     */
    func createLabel() -> UXLabel {
-      with(.init(style: self.style.label)) {
-         $0.text = self.text
+      with(.init(text: self.text, style: self.style.label)) {
          $0.textAlignment = .left 
          $0.centerVertically()
          self.addSubview($0)
@@ -25,7 +24,7 @@ extension SwitchComposite {
          self.addSubview($0)
          $0.anchor(to: self, align: .topRight, alignTo: .topRight)
          $0.size(to: self, axis: .ver, toAxis: .ver)
-         $0.size(to: self, axis: .hor, toAxis: .ver, multiplier: 2)
+         $0.size(to: self, axis: .hor, toAxis: .ver, multiplier: 1.5)
       }
    }
 }

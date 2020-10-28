@@ -44,24 +44,24 @@ extension View {
          // add cgpoint based offset to distribute in spatial ✅
          // 👇👇👇 🏀
          // create example where you inline the composite uis, no need for creational methods
-         // add padding to volume slider thumb, see switch padding 👈
+         // add padding to volume slider thumb, see switch padding ✅
          // fix track in volumeslider missbehaving when resizing parent ✅
          // add github actions 👌
          // make UXUI logo
          // make nice readme
          // add darkmode support
-         // fix thumb in slider missbehaving on dragging track
+         // fix thumb in slider missbehaving on dragging track ✅
    }
    /**
     * Label
     */
    func creatLabel() -> UXLabel {
-      with(.init(style: .default)) {
-         $0.textColor = .black
-         $0.textAlignment = .left
-         $0.text = "Hello world"
+      with(.init(text: "Label", style: .default)) {
+//         $0.textColor = .black
+//         $0.textAlignment = .left
+//         $0.text = "Hello world"
          self.addSubview($0)
-         $0.centerVertically()
+//         $0.centerVertically()
 //         $0.anchorAndSize(to: self, height: 24, offset: .init(x: 20, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
    }
@@ -69,7 +69,7 @@ extension View {
     * TextInput
     */
    func createTextInput() -> TextInputComposite {
-      with(.init(label: "Label", input: "input", style: .default)) {
+      with(.init(label: "Input", input: "data", style: .default)) {
          self.addSubview($0)
 //         $0.anchorAndSize(to: label, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }
@@ -78,7 +78,7 @@ extension View {
     * TextComponent
     */
    func createTextComponent() -> TextButtonComposite {
-      with(.init(labelText: "Label", buttonText: "Button", style: .default)) {
+      with(.init(labelText: "TextButton", buttonText: "Button", style: .default)) {
          self.addSubview($0)
 //         $0.anchorAndSize(to: textInput, sizeTo: self, height: 24, align: .topLeft, alignTo: .bottomLeft, offset: .init(x: 0, y: 20), sizeOffset: .init(width: -40, height: 0))
       }

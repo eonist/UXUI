@@ -7,8 +7,7 @@ extension CheckBoxComposite {
     * TextField
     */
    func createLabel() -> UXLabel {
-      with(.init(style: CheckBoxComposite.Style.default.label)) {
-         $0.text = self.text
+      with(.init(text: self.text, style: CheckBoxComposite.Style.default.label)) {
          $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)

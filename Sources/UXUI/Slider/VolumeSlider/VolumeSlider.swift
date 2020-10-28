@@ -12,7 +12,7 @@ public class VolumeSlider: UXSlider {
       Swift.print("createThumb")
       return with(.init()) {
          addSubview($0)
-         $0.layer?.backgroundColor = style.thumbColor.cgColor
+         $0.foreground.layer?.backgroundColor = style.thumbColor.cgColor
          $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .topLeft, alignTo: .topLeft)
          $0.onDown = onButtonDown
          $0.onMove = onButtonMove

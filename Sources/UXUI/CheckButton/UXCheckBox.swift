@@ -8,7 +8,7 @@ import QuartzCore
  * btn.selected = true
  */
 open class UXCheckBox: UXButton, Selectable {
-   public lazy var foreground: VolumeSlider.RoundedThumb = createForeground()
+   public lazy var foreground: UXCheckBox.Foreground = createForeground()
    open var selected: Bool {
       didSet {
          self.checkButtonStyle = selected ? styles.active : styles.inActive

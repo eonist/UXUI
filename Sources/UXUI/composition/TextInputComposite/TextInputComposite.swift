@@ -13,7 +13,7 @@ open class TextInputComposite: UXView {
    /**
     * init
     */
-   public init(label: String = "Label", input: String = "Input", style: TextInputComposite.Style = .default) {
+   public init(label: String = "Input", input: String = "data", style: TextInputComposite.Style = .default) {
       self.labelText = label
       self.inputText = input
       self.style = style

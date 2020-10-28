@@ -26,7 +26,7 @@ extension UXCheckBox {
  */
 extension UXCheckBox.Style {
    public static let active: UXCheckBox.Style = .init(foregroundColor: .darkGray, backgroundColor: .lightGray, isRounded: true)
-   public static let inActive: UXCheckBox.Style = .init(foregroundColor: .lightGray, backgroundColor: .darkGray, isRounded: true)
+   public static let inActive: UXCheckBox.Style = .init(foregroundColor: .gray, backgroundColor: .lightGray, isRounded: true)
    /**
     * button style getter
     */
