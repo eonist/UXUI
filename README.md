@@ -3,6 +3,7 @@
 ![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift)
 ![Swift](https://github.com/eonist/Spatial/workflows/Swift/badge.svg)  
+![Tests](https://github.com/eonist/UXUI/workflows/Tests/badge.svg)
 
 <img width="200" alt="img" src="https://github.com/stylekit/img/blob/master/uxui_logo2.svg?raw=true">  
 
