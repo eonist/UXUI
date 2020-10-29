@@ -4,8 +4,8 @@ import Foundation
  */
 extension SliderComposite {
    public struct Style {
-      let label: UXLabel.Style
-      let slider: UXSlider.Style
+      public let label: UXLabel.Style
+      public let slider: UXSlider.Style
    }
 }
 extension SliderComposite.Style {

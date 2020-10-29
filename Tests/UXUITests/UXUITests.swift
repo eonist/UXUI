@@ -1,15 +1,21 @@
 import XCTest
-@testable import UXUI
 
-final class UXUITests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(UXUI().text, "Hello, World!")
-    }
-
-    static var allTests = [
-        ("testExample", testExample)
-    ]
+class UXUITests: XCTestCase {
+   //    override func setUpWithError() throws {
+   //        // Put setup code here. This method is called before the invocation of each test method in the class.
+   //    }
+   //    override func tearDownWithError() throws {
+   //        // Put teardown code here. This method is called after the invocation of each test method in the class.
+   //    }
+   func testExample() throws {
+      Swift.print("testing")
+      // This is an example of a functional test case.
+      // Use XCTAssert and related functions to verify your tests produce the correct results.
+   }
+   //    func testPerformanceExample() throws {
+   //        // This is an example of a performance test case.
+   //        measure {
+   //            // Put the code you want to measure the time of here.
+   //        }
+   //   }
 }
