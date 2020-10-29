@@ -4,22 +4,20 @@ import Spatial
 /**
  * Sandbox for UI-Components
  */
-open class View: UXView {
-   lazy var label: UXLabel = .init(text: "TextLabel", style: .default)
-   lazy var textInput: TextInputComposite = .init(label: "TextInput", input: "text here", style: .default)
-   lazy var textButtonComponent: TextButtonComposite = .init(labelText: "TextButton", buttonText: "Button", style: .default)
+open class View: UXGraphicView {
+   lazy var label: UXLabel = .init(text: "TextLabel: ", style: .default)
+   lazy var textInput: TextInputComposite = .init(label: "TextInput: ", input: "text here", style: .default)
+   lazy var textButtonComponent: TextButtonComposite = .init(labelText: "TextButton: ", buttonText: "Button", style: .default)
    lazy var switchComponent: SwitchComposite = .init(text: "Switch: ", selected: false, style: .default)
    lazy var checkBoxComponent: CheckBoxComposite = .init(text: "CheckBox: ", selected: false, style: .default)
    lazy var sliderComponent: SliderComposite = .init(text: "Slider: ", style: .default)
+   var color: NSColor = .init()
    /**
     * Init
     * - Fixme: ⚠️️ add margins as global params etc
     */
-   override public init(frame: CGRect) {
-      super.init(frame: frame)
-      Swift.print("Hello world")
-      self.wantsLayer = true // if true then view is layer backed
-      self.layer?.backgroundColor = Theme.Background.tertiary.cgColor
+   override public init(backgroundColor: NSColor, frame: CGRect) {
+      super.init(backgroundColor: backgroundColor, frame: frame)
       createUI()
    }
 }
@@ -55,7 +53,10 @@ extension View {
          // add darkmode support 👈👈 🏀
             // add apperance change detector ✅
             // research darkmode custom look for macos best practice ✅
-            // add support for macos in darkmode repo 👈
+            // add support for macos in darkmode repo ✅
+            // add darkmode colors to styles 👈
+            // make switch look better 👈
+            // tweak volume slider a bit
          // add background to textinput? ✅
          // add linters
          // make UXUI logo

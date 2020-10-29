@@ -24,10 +24,9 @@ extension AppDelegate {
     * - Fixme: ⚠️️ use UXView instead?
     */
    func createView() -> View {
-      with(.init(frame: window.contentRect(forFrameRect: window.frame))) {
+      with(.init(backgroundColor: Theme.Background.primary, frame: window.contentRect(forFrameRect: window.frame))) {
          window.contentView = $0
 //         $0.layer?.backgroundColor = NSColor.white.cgColor
       }
    }
-   
 }

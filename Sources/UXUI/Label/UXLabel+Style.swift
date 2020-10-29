@@ -20,8 +20,11 @@ extension UXLabel {
  */
 extension UXLabel.Style {
    public static var `default`: UXLabel.Style {
-      .init(textColor: .black, font: .systemFont(ofSize: 20), textAlignment: .left, centerVertically: true, backgroundColor: .clear, isBordered: true)
+      .init(textColor: Theme.Text.title, font: .systemFont(ofSize: 18), textAlignment: .left, centerVertically: true, backgroundColor: .clear, isBordered: true)
    }
+   /**
+    * - Fixme: ⚠️️ move somewhere else?
+    */
    public static var alternate: UXLabel.Style = .default // ⚠️️ same as default?
 }
 /**

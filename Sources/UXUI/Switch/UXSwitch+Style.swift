@@ -21,8 +21,8 @@ extension UXSwitch {
     * on / off style
     */
    public struct Styles {
-      let selected: SwitchStyle // selected fore / background
-      let unSelected: SwitchStyle // unSelected fore / background
+      let selected: SwitchStyle // selected foreground / background
+      let unSelected: SwitchStyle // unSelected foreground / background
    }
 }
 /**
@@ -30,6 +30,6 @@ extension UXSwitch {
  */
 extension UXSwitch.Styles {
    public static let `default`: UXSwitch.Styles = .init(selected: selected, unSelected: unSelected)
-   public static let selected: UXSwitch.SwitchStyle = .init(foregroundColor: .darkGray, backgroundColor: .lightGray)
-   public static let unSelected: UXSwitch.SwitchStyle = .init(foregroundColor: .gray, backgroundColor: .lightGray)
+   public static let selected: UXSwitch.SwitchStyle = .init(foregroundColor: Theme.Switch.Selected.foreground, backgroundColor: Theme.Switch.Selected.background)
+   public static let unSelected: UXSwitch.SwitchStyle = .init(foregroundColor: Theme.Switch.UnSelected.foreground, backgroundColor: Theme.Switch.UnSelected.background)
 }

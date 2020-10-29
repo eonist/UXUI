@@ -4,7 +4,6 @@ open class UXLayerView: UXView {
    /**
     * - Fixme: ⚠️️ Might merge this class into UXView
     * - Parameters:
-    *   - backgroundColor: the background color of the switch-foreground
     *   - frame: Initial size and position of the frame
     */
    public override init(frame: CGRect = .zero) {

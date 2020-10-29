@@ -17,9 +17,8 @@ extension UXTextButton {
  */
 extension UXTextButton.Style {
    public static let `default`: UXTextButton.Style = {
-      let style = UXLabel.Style.default
-      let lableStyle: UXLabel.Style = .init(textColor: style.textColor, font: style.font, textAlignment: .center, centerVertically: style.centerVertically, backgroundColor: style.backgroundColor, isBordered: style.isBordered)
+      let labelStyle: UXLabel.Style = .default
+      let lableStyle: UXLabel.Style = .init(textColor: labelStyle.textColor, font: labelStyle.font, textAlignment: .center, centerVertically: labelStyle.centerVertically, backgroundColor: labelStyle.backgroundColor, isBordered: labelStyle.isBordered)
       return.init(button: .default, label: lableStyle)
    }()
-   public static let alternate: UXTextButton.Style = .init(button: UXButton.Style.alternate, label: UXLabel.Style.alternate)
 }
