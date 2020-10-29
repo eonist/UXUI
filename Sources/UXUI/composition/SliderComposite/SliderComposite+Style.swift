@@ -9,5 +9,5 @@ extension SliderComposite {
    }
 }
 extension SliderComposite.Style {
-   public static let `default`: SliderComposite.Style = .init(label: .default, slider: .default)
+   public static let `default`: SliderComposite.Style = .init(label: .default, slider: .volumSliderStyle)
 }

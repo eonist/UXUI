@@ -5,11 +5,11 @@ import Spatial
  * Sandbox for UI-Components
  */
 open class View: UXGraphicView {
-   lazy var label: UXLabel = .init(text: "TextLabel: ", style: .default)
-   lazy var textInput: TextInputComposite = .init(label: "TextInput: ", input: "text here", style: .default)
+   lazy var label: UXLabel = .init(text: "TextLabel ", style: .default)
+   lazy var textInput: TextInputComposite = .init(label: "TextInput: ", input: "Text here", style: .default)
    lazy var textButtonComponent: TextButtonComposite = .init(labelText: "TextButton: ", buttonText: "Button", style: .default)
-   lazy var switchComponent: SwitchComposite = .init(text: "Switch: ", selected: false, style: .default)
-   lazy var checkBoxComponent: CheckBoxComposite = .init(text: "CheckBox: ", selected: false, style: .default)
+   lazy var switchComponent: SwitchComposite = .init(text: "Switch: ", selected: true, style: .default)
+   lazy var checkBoxComponent: CheckBoxComposite = .init(text: "CheckBox: ", selected: true, style: .default)
    lazy var sliderComponent: SliderComposite = .init(text: "Slider: ", style: .default)
    var color: NSColor = .init()
    /**
@@ -50,19 +50,20 @@ extension View {
          Swift.print("slider.progress: \($0)")
       }
       // continue here:
-         // add darkmode support 👈👈 🏀
+         // add darkmode support ✅
             // add apperance change detector ✅
             // research darkmode custom look for macos best practice ✅
             // add support for macos in darkmode repo ✅
-            // add darkmode colors to styles 👈
-            // make switch look better 👈
-            // tweak volume slider a bit
+            // add darkmode colors to styles ✅
+            // make switch look better ✅
+            // tweak volume slider a bit ✅
+            // check if light-mode works properly ✅
          // add background to textinput? ✅
-         // add linters
-         // make UXUI logo
-         // make nice readme
+         // add linters 👈
+         // make UXUI logo 👈
+         // make nice readme 👈
          // add github actions 👌
+         // soft launch 👈
          // add UI event listeners ✅
    }
 }
-
