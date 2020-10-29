@@ -2,21 +2,19 @@
 ![platform](https://img.shields.io/badge/Platform-macOS-blue.svg)
 ![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift)
-![Swift](https://github.com/eonist/Spatial/workflows/Swift/badge.svg)
+![Swift](https://github.com/eonist/Spatial/workflows/Swift/badge.svg)  
 
 <img width="200" alt="img" src="https://github.com/stylekit/img/blob/master/uxui_logo2.svg?raw=true">  
 
-<br>
-<br>
-<img width="447" alt="img" src="https://github.com/stylekit/img/blob/master/uxui.gif?raw=true">
-
-# Features:
+### Features:
 - LightMode / DarkMode via [DarkMode](https://github.com/passguardapp/DarkMode)
 - Autolayout via [Spatial](https://github.com/eonist/Spatial)
 - Struct based component styling
 - Closure based callbacks for UI-events
 
-# Examples:
+<img width="447" alt="img" src="https://github.com/stylekit/img/blob/master/uxui.gif?raw=true">
+
+### Examples:
 ```swift
 // Label
 let label = UXLabel(frame: .init(x: 0, y: 0, width: 120, height: 24))
