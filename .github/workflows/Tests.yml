@@ -1,0 +1,20 @@
+name: Tests
+
+on: 
+  push:
+     branches:
+     - master
+  schedule:
+  - cron: "0 13 * * 0-6"
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
