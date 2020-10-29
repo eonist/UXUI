@@ -10,8 +10,8 @@ extension UXSwitch {
    func toggleForegroundPosition() {
       let alignment: Alignment = selected ? .topRight : .topLeft
       let offset: CGPoint = {
-         let selectedOffset: CGPoint = .init(x: -self.switchStyle.foregroundPadding.width/2, y: self.switchStyle.foregroundPadding.height/2)
-         let unSelectedOffset: CGPoint = .init(x: self.switchStyle.foregroundPadding.width/2, y: self.switchStyle.foregroundPadding.height/2)
+         let selectedOffset: CGPoint = .init(x: -self.switchStyle.foregroundPadding.width / 2, y: self.switchStyle.foregroundPadding.height / 2)
+         let unSelectedOffset: CGPoint = .init(x: self.switchStyle.foregroundPadding.width / 2, y: self.switchStyle.foregroundPadding.height / 2)
          return selected ? selectedOffset : unSelectedOffset
       }()
       if let anchor = foreground.anchor { NSLayoutConstraint.deactivate([anchor.x, anchor.y]) }

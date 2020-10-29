@@ -24,7 +24,7 @@ class VerticallyAlignedTextFieldCell: NSTextFieldCell {
     * - Note: the -3px part is a small fix, seems like if fontsize is 20, the height is 23 etc
     */
    override func drawingRect(forBounds rect: NSRect) -> NSRect {
-      let newRect: NSRect = .init(x: 0, y: ((rect.size.height - textHeight) / 2) , width: rect.size.width, height: rect.size.height )
+      let newRect: NSRect = .init(x: 0, y: ((rect.size.height - textHeight) / 2), width: rect.size.width, height: rect.size.height )
       return super.drawingRect(forBounds: newRect)
    }
    /**

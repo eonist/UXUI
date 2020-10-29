@@ -10,13 +10,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    lazy var view: NSView = createView()
    func applicationDidFinishLaunching(_ aNotification: Notification) {
       _ = view
-      let apperance = Apperance.init()
-      _ = apperance
+//      let apperance: Apperance = .init()
+//      _ = apperance
 //      Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
-      ChangeDetector.activateChangeCallback()
-      ChangeDetector.onInterfaceChange = {
+//      ChangeDetector.activateChangeCallback()
+//      ChangeDetector.onInterfaceChange = {
 //         Swift.print("apperance.inDarkMode:  \(apperance.inDarkMode)")
-      }
+//      }
    }
 }
 extension AppDelegate {

@@ -7,7 +7,7 @@ import Foundation
  * ## Example:
  * Apperance().inDarkMode
  */
-public enum Apperance : String {
+public enum Apperance: String {
    case Dark, Light
 }
 extension Apperance {
@@ -32,7 +32,7 @@ extension Apperance {
  * ## Example:
  * ChangeDetector.onInterfaceChange = {/*Apperance().inDarkMode*/}
  */
-final public class ChangeDetector {
+public final class ChangeDetector {
    /**
     * Callback closure that is called on OS apperance change
     */

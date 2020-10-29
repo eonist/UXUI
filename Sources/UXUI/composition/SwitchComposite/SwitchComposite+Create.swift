@@ -8,7 +8,7 @@ extension SwitchComposite {
     */
    func createLabel() -> UXLabel {
       with(.init(text: self.text, style: self.style.label)) {
-         $0.textAlignment = .left 
+         $0.textAlignment = .left
          $0.centerVertically()
          self.addSubview($0)
          $0.size(to: self, axis: .ver, toAxis: .ver)

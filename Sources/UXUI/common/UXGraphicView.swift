@@ -19,7 +19,7 @@ extension UXGraphicView {
    /**
     * When apperance change, this is redrawn
     */
-   open override func draw(_ dirtyRect: NSRect) {
+   override open func draw(_ dirtyRect: NSRect) {
       super.draw(dirtyRect)
       self.layer?.backgroundColor = backgroundColor.cgColor
    }

@@ -1,7 +1,9 @@
 import Cocoa
 import With
 import Spatial
-
+/**
+ * - Fixme: ⚠️️ Test this in example, and implement darkmode for images similar to ios
+ */
 open class IconButton: UXButton {
    let iconURL: URL
    lazy var imageView: NSImageView = createImageView()
@@ -20,7 +22,7 @@ extension IconButton {
     */
    func createImageView() -> NSImageView {
       with(.init()) {
-         $0.image = NSImage.init(contentsOf: iconURL)
+         $0.image = NSImage(contentsOf: iconURL)
          addSubview($0)
          $0.anchorAndSize(to: self)
       }

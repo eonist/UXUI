@@ -10,7 +10,7 @@ extension VolumeSlider {
        * - Fixme: ⚠️️ make own foreground
        */
       public lazy var foreground: Foreground = createForeground()
-      public override init(frame: CGRect = .zero) {
+      override public init(frame: CGRect = .zero) {
          super.init(frame: frame)
       }
    }
@@ -35,11 +35,11 @@ extension VolumeSlider.RoundedThumb {
  * Foreground
  */
 extension VolumeSlider.RoundedThumb {
-   final public class Foreground: UXGraphicView {
+   public final class Foreground: UXGraphicView {
       /**
        * - Abstract. the drawlayout method is the only method were we can get frame when using autolayout
        */
-      public override func layout() {
+      override public func layout() {
          super.layout()
          self.layer?.cornerRadius = self.frame.height / 2
       }
