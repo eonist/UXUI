@@ -11,8 +11,8 @@ import Cocoa
  * - Fixme: ⚠️️ not showing cursor blink
  */
 open class UXLabel: NSTextField {
-   var style: Style = .default
-   var onTextFieldChange: OnTextFieldChange = defaultOnTextFieldChange // callback
+   public var style: Style = .default
+   public var onTextFieldChange: OnTextFieldChange = defaultOnTextFieldChange // callback
    /**
     * - Parameter frameRect: size of label if not using auto-layout
     */

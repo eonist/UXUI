@@ -3,6 +3,6 @@ import Foundation
  * Const
  */
 extension UXLabel {
-   typealias OnTextFieldChange = () -> Void
-   static let defaultOnTextFieldChange: OnTextFieldChange = {}
+   public typealias OnTextFieldChange = () -> Void
+   public static let defaultOnTextFieldChange: OnTextFieldChange = {}
 }
