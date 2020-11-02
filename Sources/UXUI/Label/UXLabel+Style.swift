@@ -13,6 +13,14 @@ extension UXLabel {
       public let centerVertically: Bool
       public let backgroundColor: NSColor
       public let isBordered: Bool // this avoids text jumping when editable is true, doesnt show border
+      public init(textColor: NSColor, font: NSFont, textAlignment: NSTextAlignment = .left, centerVertically: Bool = true, backgroundColor: NSColor = .clear, isBordered: Bool = false) {
+         self.textColor = textColor
+         self.font = font
+         self.textAlignment = textAlignment
+         self.centerVertically = centerVertically
+         self.backgroundColor = backgroundColor
+         self.isBordered = isBordered
+      }
    }
 }
 /**
