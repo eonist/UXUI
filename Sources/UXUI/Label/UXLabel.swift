@@ -16,7 +16,7 @@ open class UXLabel: NSTextField {
    /**
     * - Parameter frameRect: size of label if not using auto-layout
     */
-   override init(frame frameRect: NSRect = .zero) {
+   override public init(frame frameRect: NSRect = .zero) {
       super.init(frame: frameRect)
       self.isBezeled = false
       self.drawsBackground = false
