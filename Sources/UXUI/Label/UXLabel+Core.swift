@@ -22,12 +22,11 @@ extension UXLabel {
       isEnabled ?  super.hitTest(point) : nil
    }
    /**
-    * Fixme: ⚠️️ This is not optimal, there could be a better way to do this, maybe look into: baselineOffset attributed string etc
-    * Fixme: ⚠️️ add support for background color
+    * - Fixme: ⚠️️ This is not optimal, there could be a better way to do this, maybe look into: baselineOffset attributed string etc
+    * - Fixme: ⚠️️ add support for background color
     */
    public func centerVertically() {
       let textHeight = self.attributedStringValue.size().height
-//      Swift.print("textHeight:  \(textHeight)")
       let font = self.font
       let isBordered = self.isBordered
       let textAlignment = self.textAlignment
@@ -37,14 +36,10 @@ extension UXLabel {
       self.cell = VerticallyAlignedTextFieldCell(textHeight: textHeight, textCell: self.stringValue)
       self.font = font // ⚠️️ We have to re-apply these after cell is set
       self.isBordered = isBordered // this avoids text jumping when editable is true
-//      self.cell?.layer
-//      Swift.print("isBordered:  \(isBordered)")
       self.textColor = textColor
       self.isEnabled = isEnabled
       self.textAlignment = textAlignment
       self.focusRingType = focusRing
-//      Swift.print(":  \(focusRing.rawValue)")
-//      Swift.print("self.isBordered:  \(self.isBordered)")
    }
    /**
     * Need to get rid of border in the cell (border is hard to get rid of otherwise)
