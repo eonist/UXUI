@@ -22,7 +22,6 @@ open class UXCheckBox: UXButton, Selectable {
    internal var checkButtonStyle: UXCheckBox.Style { // backgroundColor, borderColor, textColor
       didSet {
          self.layer?.borderWidth = 0
-//         self.layer?.backgroundColor = checkButtonStyle.foregroundColor.cgColor
          self.layer?.backgroundColor = checkButtonStyle.backgroundColor.cgColor
       }
    }

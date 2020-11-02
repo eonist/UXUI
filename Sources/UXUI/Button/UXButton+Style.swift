@@ -25,5 +25,5 @@ extension UXButton {
  * Default styles
  */
 extension UXButton.Style {
-   public static let `default`: UXButton.Style = .init(backgroundColor: Theme.Button.primary, borderColor: .clear, borderWidth: 0, isRounded: true, cornerRadius: 4)
+   public static let `default`: UXButton.Style = .init(backgroundColor: Theme.Button.primary, borderColor: .clear, borderWidth: 0, isRounded: true, cornerRadius: 2)
 }
