@@ -9,7 +9,7 @@ public class VolumeSlider: UXSlider {
     * Create the button
     */
    override func createThumb() -> RoundedThumb {
-      Swift.print("createThumb")
+//      Swift.print("createThumb")
       return with(.init()) {
          addSubview($0)
          $0.foreground.backgroundColor = style.thumbColor
@@ -22,7 +22,7 @@ public class VolumeSlider: UXSlider {
     * Create the background
     */
    override func createBackground() -> RoundedTrack {
-      Swift.print("createBackground")
+//      Swift.print("createBackground")
       return with(.init()) {
          addSubview($0)
          $0.layer?.backgroundColor = style.trackColor.cgColor

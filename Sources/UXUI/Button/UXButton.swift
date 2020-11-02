@@ -9,13 +9,12 @@ import Cocoa
  * view.addSubview(btn)
  * btn.tapUpInsideCallBack = { Swift.print("🎉") }
  */
-open class UXButton: UXLayerView, ConstraintKind {
+open class UXButton: UXGraphicView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
     */
-   public var anchor: (x: NSLayoutConstraint, y: NSLayoutConstraint)?
-   public var size: (w: NSLayoutConstraint, h: NSLayoutConstraint)?
+   public var anchorAndSize: AnchorAndSize?
    internal var hasMouseEntered: Bool = false // Required for onOver / onOut to work
    // Call-backs
    public var upInsideCallBack: UpInsideCallBack = defaultUpInside // rename to upInside
@@ -35,6 +34,6 @@ open class UXButton: UXLayerView, ConstraintKind {
     */
    public init(style: UXButton.Style = .default, frame: CGRect = .zero) {
       self.style = style
-      super.init(frame: frame)
+      super.init(backgroundColor: style.backgroundColor, isRounded: style.isRounded, frame: frame)
    }
 }

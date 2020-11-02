@@ -8,7 +8,7 @@ public class SwitchForeground: UXLayerView, ConstraintKind {
     * - Note: We have to store the constraints because we animate them
     */
    public var anchor: (x: NSLayoutConstraint, y: NSLayoutConstraint)?
-   public var size: (w: NSLayoutConstraint, h: NSLayoutConstraint)?
+//   public var size: (w: NSLayoutConstraint, h: NSLayoutConstraint)?
 }
 /**
  * Core

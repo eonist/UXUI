@@ -15,6 +15,8 @@ extension UXSwitch {
          return selected ? selectedOffset : unSelectedOffset
       }()
       if let anchor = foreground.anchor { NSLayoutConstraint.deactivate([anchor.x, anchor.y]) }
+//      if let size = foreground.size { NSLayoutConstraint.deactivate([size.w, size.h]) }
       foreground.applyAnchor(to: self, align: alignment, alignTo: alignment, offset: offset)
+//      foreground.applyAnchorAndSize(to: self, align: alignment, alignTo: alignment, offset: offset)
    }
 }

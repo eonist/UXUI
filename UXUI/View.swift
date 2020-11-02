@@ -16,7 +16,7 @@ open class View: UXGraphicView {
     * Init
     * - Fixme: ⚠️️ add margins as global params etc
     */
-   override public init(backgroundColor: NSColor, frame: CGRect) {
+   public init(backgroundColor: NSColor, frame: CGRect) {
       super.init(backgroundColor: backgroundColor, frame: frame)
       createUI()
    }

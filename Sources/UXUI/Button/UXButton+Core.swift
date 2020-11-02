@@ -11,7 +11,13 @@ extension UXButton {
    override open func layout() {
       super.layout()
       with(self.layer) {
-         $0?.cornerRadius = style.isRounded ? frame.height / style.cornerRadius : self.layer?.cornerRadius ?? 0
+         $0?.cornerRadius = { // - Fixme: ⚠️️ make this simpler later
+            if style.isRounded {
+               return style.cornerRadius == 0 ? self.frame.height / 2 : self.frame.height / style.cornerRadius
+            } else {
+               return self.layer?.cornerRadius ?? 0
+            }
+         }()
          $0?.borderColor = style.borderColor.cgColor
          $0?.backgroundColor = style.backgroundColor.cgColor
          $0?.borderWidth = style.borderWidth
