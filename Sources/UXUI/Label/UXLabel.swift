@@ -28,6 +28,7 @@ open class UXLabel: NSTextField {
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    public required init?(coder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
