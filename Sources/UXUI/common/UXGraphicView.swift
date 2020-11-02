@@ -1,7 +1,7 @@
 import Cocoa
 
 open class UXGraphicView: UXLayerView {
-   var backgroundColor: NSColor
+   open var backgroundColor: NSColor
    /**
     * - Parameters:
     *   - backgroundColor: the background color of the switch-foreground
