@@ -14,7 +14,7 @@ extension UXLabel {
     * Sets the text of the label
     * - Note: This doesn't have to be optional, but Label.text in ios is optional so to make the call consistent we make it optional
     */
-   open var text: String? {
+   @objc open var text: String? { // we use @objc to make overriding from extensions possible
       get { self.stringValue }
       set { self.stringValue = newValue ?? self.stringValue }
    }
@@ -35,7 +35,7 @@ extension UXLabel {
       let focusRing = self.focusRingType
       self.cell = VerticallyAlignedTextFieldCell(textHeight: textHeight, textCell: self.stringValue)
       self.font = font // ⚠️️ We have to re-apply these after cell is set
-      self.isBordered = isBordered // this avoids text jumping when editable is true
+      self.isBordered = isBordered // ⚠️️⚠️️ this avoids text jumping when editable is true
       self.textColor = textColor
       self.isEnabled = isEnabled
       self.textAlignment = textAlignment

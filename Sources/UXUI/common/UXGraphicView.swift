@@ -1,6 +1,9 @@
 import Cocoa
 
 open class UXGraphicView: UXLayerView {
+   /**
+    * - Fixme: ⚠️️ should we add didSet functionality to update background? for now i guess the caller can call layout or draw
+    */
    open var backgroundColor: NSColor
    open var isRounded: Bool
    /**
