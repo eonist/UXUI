@@ -10,6 +10,10 @@ extension UXTextButton {
    public struct Style {
       let button: UXButton.Style
       let label: UXLabel.Style
+      public init(button: UXButton.Style, label: UXLabel.Style) {
+         self.button = button
+         self.label = label
+      }
    }
 }
 /**
