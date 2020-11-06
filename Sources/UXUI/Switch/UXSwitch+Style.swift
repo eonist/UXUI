@@ -30,10 +30,15 @@ extension UXSwitch {
    }
 }
 /**
- * Const
+ * Styles
  */
 extension UXSwitch.Styles {
-   public static let `default`: UXSwitch.Styles = .init(selected: selected, unSelected: unSelected)
+   public static let `default`: UXSwitch.Styles = .init(selected: .selected, unSelected: .unSelected)
+}
+/**
+ * Style
+ */
+extension UXSwitch.SwitchStyle {
    public static let selected: UXSwitch.SwitchStyle = .init(foregroundColor: Theme.Switch.Selected.foreground, backgroundColor: Theme.Switch.Selected.background)
    public static let unSelected: UXSwitch.SwitchStyle = .init(foregroundColor: Theme.Switch.UnSelected.foreground, backgroundColor: Theme.Switch.UnSelected.background)
 }
