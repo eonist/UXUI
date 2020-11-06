@@ -35,6 +35,8 @@ extension UXGraphicView {
     */
    override open func layout() {
       super.layout()
+//      Swift.print("\(self) layout backgroundColor:  \(backgroundColor)")
+      self.layer?.backgroundColor = backgroundColor.cgColor
       self.layer?.cornerRadius = isRounded ? self.frame.size.height / 2 : self.layer?.cornerRadius ?? 0
    }
 }

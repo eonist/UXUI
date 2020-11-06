@@ -43,6 +43,7 @@ extension View {
       switchComponent.switcher.upInsideCallBack = {
          Swift.print("IsOn:  \(self.switchComponent.switcher.selected)")
       }
+//      switchComponent.switcher.selected = true
       checkBoxComponent.checkBox.upInsideCallBack = {
          Swift.print("isChecked: \(self.checkBoxComponent.checkBox.selected)")
       }

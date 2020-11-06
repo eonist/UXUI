@@ -14,12 +14,16 @@ open class UXSwitch: UXButton, Selectable {
    public lazy var foreground: SwitchForeground = createForeground()
    /**
     * Change selected state
+    * - Fixme: ⚠️️ the layout calls should be baked into background var?
     */
    open var selected: Bool {
       didSet {
          self.switchStyle = self.selected ? switchStyles.selected : switchStyles.unSelected
          super.style.backgroundColor = self.switchStyle.backgroundColor
+         self.backgroundColor = self.switchStyle.backgroundColor
+         self.layout()
          foreground.backgroundColor = self.switchStyle.foregroundColor
+         foreground.layout()
          toggleForegroundPosition()
       }
    }
