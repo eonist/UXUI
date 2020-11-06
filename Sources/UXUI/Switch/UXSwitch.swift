@@ -19,7 +19,7 @@ open class UXSwitch: UXButton, Selectable {
       didSet {
          self.switchStyle = self.selected ? switchStyles.selected : switchStyles.unSelected
          super.style.backgroundColor = self.switchStyle.backgroundColor
-         foreground.layer?.backgroundColor = self.switchStyle.foregroundColor.cgColor
+         foreground.backgroundColor = self.switchStyle.foregroundColor
          toggleForegroundPosition()
       }
    }
@@ -34,8 +34,8 @@ open class UXSwitch: UXButton, Selectable {
       self.selected = isSelected
       self.switchStyles = styles
       self.switchStyle = isSelected ? styles.selected : styles.unSelected
-      let selectedStyle: Style = .init(backgroundColor: styles.selected.backgroundColor, borderColor: .clear, borderWidth: 0, isRounded: true)
-      let unSelectedStyle: Style = .init(backgroundColor: styles.unSelected.backgroundColor, borderColor: .clear, borderWidth: 0, isRounded: true)
+      let selectedStyle: UXButton.Style = .init(backgroundColor: styles.selected.backgroundColor, borderColor: .clear, borderWidth: 0, isRounded: true)
+      let unSelectedStyle: UXButton.Style = .init(backgroundColor: styles.unSelected.backgroundColor, borderColor: .clear, borderWidth: 0, isRounded: true)
       let style: Style = isSelected ? selectedStyle : unSelectedStyle
       super.init(style: style, frame: frame)
       _ = foreground

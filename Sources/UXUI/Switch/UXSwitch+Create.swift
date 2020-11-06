@@ -10,9 +10,9 @@ extension UXSwitch {
     * - Note: the background is in the button
     */
    func createForeground() -> SwitchForeground {
-      with(.init(frame: .zero)) {
+      with(.init(backgroundColor: switchStyle.foregroundColor, frame: .zero)) {
          addSubview($0)
-         $0.layer?.backgroundColor = switchStyle.foregroundColor.cgColor
+//         $0.layer?.backgroundColor = .cgColor
 //         $0.applyAnchorAndSize
          $0.applySize { view in
             let w: NSLayoutConstraint = Constraint.length(view, to: self, viewAxis: .hor, toAxis: .ver, offset: -switchStyle.foregroundPadding.width)

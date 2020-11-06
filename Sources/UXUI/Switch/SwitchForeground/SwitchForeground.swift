@@ -2,7 +2,7 @@ import Cocoa
 import Spatial
 import QuartzCore
 
-public class SwitchForeground: UXLayerView, ConstraintKind {
+public class SwitchForeground: UXGraphicView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
