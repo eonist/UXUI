@@ -11,7 +11,7 @@ extension UXSwitch {
       let foregroundColor: NSColor // color of foreground
       let backgroundColor: NSColor // color of background
       let foregroundPadding: CGSize
-      init(foregroundColor: NSColor, backgroundColor: NSColor, foregroundPadding: CGSize = .init(width: 8, height: 8)) {
+      public init(foregroundColor: NSColor, backgroundColor: NSColor, foregroundPadding: CGSize = .init(width: 8, height: 8)) {
          self.foregroundColor = foregroundColor
          self.backgroundColor = backgroundColor
          self.foregroundPadding = foregroundPadding
@@ -23,6 +23,10 @@ extension UXSwitch {
    public struct Styles {
       let selected: SwitchStyle // selected foreground / background
       let unSelected: SwitchStyle // unSelected foreground / background
+      public init(selected: UXSwitch.SwitchStyle, unSelected: UXSwitch.SwitchStyle) {
+         self.selected = selected
+         self.unSelected = unSelected
+      }
    }
 }
 /**

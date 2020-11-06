@@ -30,7 +30,7 @@ open class UXSwitch: UXButton, Selectable {
     *   - styles: on / off (foreground/ background)
     *   - frame: size of Switch
     */
-   public init(isSelected: Bool, styles: Styles = .default, frame: CGRect = .zero) {
+   public init(isSelected: Bool = false, styles: Styles = .default, frame: CGRect = .zero) {
       self.selected = isSelected
       self.switchStyles = styles
       self.switchStyle = isSelected ? styles.selected : styles.unSelected
