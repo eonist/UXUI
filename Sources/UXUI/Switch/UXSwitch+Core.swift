@@ -6,6 +6,7 @@ import Cocoa
 extension UXSwitch {
    /**
     * Change foreground
+    * - Fixme: ⚠️️ seems a bit hacky, maybe make it better?
     */
    func toggleForegroundPosition() {
       let alignment: Alignment = selected ? .topRight : .topLeft

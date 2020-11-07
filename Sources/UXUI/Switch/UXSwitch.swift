@@ -21,9 +21,9 @@ open class UXSwitch: UXButton, Selectable {
          self.switchStyle = self.selected ? switchStyles.selected : switchStyles.unSelected
          super.style.backgroundColor = self.switchStyle.backgroundColor
          self.backgroundColor = self.switchStyle.backgroundColor
-         self.layout()
+         self.layout() // ⚠️️ quick fix to get correct init styles working
          foreground.backgroundColor = self.switchStyle.foregroundColor
-         foreground.layout()
+         foreground.layout() // ⚠️️ quick fix to get correct init styles working
          toggleForegroundPosition()
       }
    }

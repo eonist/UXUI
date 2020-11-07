@@ -22,6 +22,9 @@ extension SwitchForeground {
       super.layout()
       self.layer?.cornerRadius = self.frame.size.height / 2
    }
+   /**
+    * - Fixme: ⚠️️ why return nil? to let background be the clicktarget?
+    */
    override public func hitTest(_ point: CGPoint) -> View? {
       nil
    }
