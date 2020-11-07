@@ -24,7 +24,7 @@ extension IconButton {
     */
    @objc open func createImageView() -> NSImageView {
       with(.init()) {
-         $0.image = isNamed ? NSImage(contentsOf: URL(fileURLWithPath: iconURL)) : NSImage(named: iconURL)
+         $0.image = isNamed ? NSImage(named: iconURL) : NSImage(contentsOf: URL(fileURLWithPath: iconURL))
          addSubview($0)
          $0.anchorAndSize(to: self)
       }
