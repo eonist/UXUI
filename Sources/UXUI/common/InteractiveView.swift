@@ -8,6 +8,7 @@ open class InteractiveView: UXLayerView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
+    * - Fixme: ⚠️️ use anchorSize variable instead
     */
    public var anchor: (x: NSLayoutConstraint, y: NSLayoutConstraint)?
    public var size: (w: NSLayoutConstraint, h: NSLayoutConstraint)?
@@ -51,3 +52,17 @@ extension InteractiveView {
       onMove(p)
    }
 }
+/**
+ * over / out
+ * - Fixme: ⚠️️ fix this later, might need to look into how Hybrid does this, if it worked there
+ */
+//extension InteractiveView {
+//   open override func mouseEntered(with event: NSEvent) {
+//      super.mouseEntered(with: event)
+//      NSCursor.pointingHand.set()
+//   }
+//   open override func mouseExited(with event: NSEvent) {
+//      super.mouseExited(with: event)
+//      NSCursor.arrow.set()
+//   }
+//}

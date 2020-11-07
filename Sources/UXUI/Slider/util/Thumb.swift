@@ -1,6 +1,8 @@
 import Cocoa
 import Spatial
-
+/**
+ * Could we use UXButton?
+ */
 open class Thumb: InteractiveView {
    /**
     * Mouse dragged

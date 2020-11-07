@@ -1,7 +1,7 @@
 import Spatial
 import Cocoa
 /**
- * Button for macOS (Native NSButton is bloated and isnt easily customized)
+ * Button for macOS (Native NSButton is bloated and isn't easily customized)
  * - Note: ConstraintKind: Makes the component work with bulk autolayout functionality and animation
  * - Fixme: ⚠️️ Style could be StyleKind and then be overriden in subclasses?
  * ## Examples:

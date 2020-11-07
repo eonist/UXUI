@@ -58,6 +58,7 @@ extension UXButton: MouseTrackable {
    }
    /**
     * CGPath
+    * - Fixme: ⚠️️ might want to base this path on the path of the graphics
     */
    var path: CGPath? {
       let r: CGFloat = self.frame.height / 2
@@ -76,12 +77,14 @@ extension UXButton: MouseTrackable {
     * When the mouse enters the tracking area or tracking shape (Overridable)
     */
    @objc open func onOver() {
+      NSCursor.pointingHand.set()
       overCallBack()
    }
    /**
     * When the mouse exits the tracking area or tracking shape (Overridable)
     */
    @objc open func onOut() {
+      NSCursor.arrow.set()
       outCallBack()
    }
 }
