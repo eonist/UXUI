@@ -9,6 +9,10 @@ extension UXSelectTextButton {
    public struct Styles {
       let active: UXTextButton.Style
       let inActive: UXTextButton.Style
+      public init(active: UXTextButton.Style, inActive: UXTextButton.Style) {
+         self.active = active
+         self.inActive = inActive
+      }
    }
 }
 /**
@@ -17,10 +21,14 @@ extension UXSelectTextButton {
  */
 extension UXSelectTextButton.Styles {
    public static let defaultStyles: UXSelectTextButton.Styles = .init(active: .alternate, inActive: .default)
+   /**
+    * Similar to iOS style
+    */
    public static let toggleStyles: UXSelectTextButton.Styles = {
-      // 🏀 continue here, make it similar to iOS toggle label
-      let selected: UXTextButton.Style = .init(button: .default, label: .default)
-      let unSelected: UXTextButton.Style = .init(button: .default, label: .default)
-      return .init(active: .alternate, inActive: .default)
+      let buttonStyle: UXButton.Style = .init(backgroundColor: .clear, borderColor: .clear, borderWidth: 0, isRounded: false)
+      let labelStyle: UXLabel.Style = .init(textColor: .systemBlue, font: .labelFont(ofSize: 18), textAlignment: .left, centerVertically: true, backgroundColor: .clear, isBordered: true)
+      let selected: UXTextButton.Style = .init(button: buttonStyle, label: labelStyle)
+      let unSelected: UXTextButton.Style = .init(button: buttonStyle, label: labelStyle)
+      return .init(active: selected, inActive: unSelected)
    }()
 }
