@@ -13,7 +13,8 @@ open class UXSelectTextButton: UXTextButton, Selectable {
    }
    public typealias Text = (selected: String, unSelected: String)
    public static let defaultTexts: Text = ("Selected", "UnSelected")
-   let texts: Text
+   // - Fixme: ⚠️️ maybe add didset on the bellow var
+   public var texts: Text
    public init(selected: Bool = false, texts: Text = defaultTexts, styles: Styles = .defaultStyles, frame: CGRect = .zero) {
       self.styles = styles
       self.selected = selected
