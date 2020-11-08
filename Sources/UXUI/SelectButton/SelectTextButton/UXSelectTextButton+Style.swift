@@ -24,12 +24,3 @@ extension UXSelectTextButton.Styles {
       return .init(active: .alternate, inActive: .default)
    }()
 }
-/**
- * Alternate style for TextButton
- */
-extension UXTextButton.Style {
-   /**
-    * Used for selected / non selected state
-    */
-   public static let alternate: UXTextButton.Style = .init(button: UXSelectButton.alternate, label: UXLabel.Style.alternate)
-}

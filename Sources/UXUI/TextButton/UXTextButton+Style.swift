@@ -27,4 +27,9 @@ extension UXTextButton.Style {
       let btnStyle: UXButton.Style = .init(backgroundColor: buttonStyle.backgroundColor, borderColor: buttonStyle.borderColor, borderWidth: buttonStyle.borderWidth, isRounded: buttonStyle.isRounded, cornerRadius: 4)
       return.init(button: btnStyle, label: lblStyle)
    }()
+   /**
+    * Used for selected / non selected state
+    * - Note: For some reason this cant recide in the UXSelectTextButton file
+    */
+   public static let alternate: UXTextButton.Style = .init(button: UXSelectButton.alternate, label: UXLabel.Style.alternate)
 }
