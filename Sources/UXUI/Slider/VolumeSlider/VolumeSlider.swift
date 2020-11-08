@@ -13,7 +13,7 @@ public class VolumeSlider: UXSlider {
       return with(.init()) {
          addSubview($0)
          $0.foreground.backgroundColor = style.thumbColor
-         $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .topLeft, alignTo: .topLeft)
+         $0.applyAnchorAndSize(to: self, width: buttonSide, height: buttonSide, align: .centerLeft, alignTo: .centerLeft)
          $0.onDown = onButtonDown
          $0.onMove = onButtonMove
       }

@@ -19,7 +19,7 @@ open class UXSlider: UXView {
          let value: CGFloat = SliderHelper.thumbPosition(progress: progress, side: frame.size[axis], thumbSide: button.frame.size[axis])
          var pos: CGPoint = .zero
          pos[axis] = value
-         button.update(offset: pos, align: .topLeft, alignTo: .topLeft)
+         button.update(offset: pos, align: .centerLeft, alignTo: .centerLeft)
       }
    }
    /**
