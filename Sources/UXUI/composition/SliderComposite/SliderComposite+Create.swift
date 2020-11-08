@@ -18,7 +18,7 @@ extension SliderComposite {
       }
    }
    /**
-    * Slider
+    * Slider (VolumeSlider)
     */
    func createSlider() -> VolumeSlider {
       with(.init(axis: .hor, buttonSide: 32, progress: 0.5, style: SliderComposite.Style.default.slider)) {

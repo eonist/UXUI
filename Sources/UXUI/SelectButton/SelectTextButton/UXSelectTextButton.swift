@@ -7,14 +7,19 @@ open class UXSelectTextButton: UXTextButton, Selectable {
    internal var styles: Styles
    open var selected: Bool {
       didSet {
+         self.textLabel.text = selected ? texts.selected : texts.unSelected
          self.textButtonStyle = selected ? styles.active : styles.inActive
       }
    }
-   public init(selected: Bool = false, text: String = "Default", styles: Styles = defaultStyles, frame: CGRect = .zero) {
+   public typealias Text = (selected: String, unSelected: String)
+   public static let defaultTexts: Text = ("Selected", "UnSelected")
+   let texts: Text
+   public init(selected: Bool = false, texts: Text = defaultTexts, styles: Styles = .defaultStyles, frame: CGRect = .zero) {
       self.styles = styles
       self.selected = selected
+      self.texts = texts
       let style: UXTextButton.Style = selected ? styles.active : styles.inActive
-      super.init(text: text, style: style, frame: frame)
+      super.init(text: selected ? texts.selected : texts.unSelected, style: style, frame: frame)
       _ = { self.selected = self.selected }() // hack
    }
 }
