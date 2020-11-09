@@ -8,7 +8,7 @@ extension UXSelectTextButton {
     */
    override open func onUpInside() {
       Swift.print("onUpInside")
-      super.onUpInside()
       selected.toggle() // toggle selected state
+      super.onUpInside()
    }
 }
