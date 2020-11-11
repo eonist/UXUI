@@ -24,7 +24,7 @@ extension IconButton {
     */
    @objc open func createImageView() -> NSImageView {
       with(.init()) {
-         $0.image = isNamed ? NSImage(named: iconURL) : NSImage(contentsOf: URL(fileURLWithPath: iconURL))
+         setImg(iconURL: iconURL, isNamed: isNamed)
          addSubview($0)
          $0.anchorAndSize(to: self)
       }
@@ -37,4 +37,15 @@ extension IconButton {
    public static let emptyStyle: UXButton.Style = {
       .init(backgroundColor: NSColor.clear.withAlphaComponent(0.0001), borderColor: .clear, borderWidth: 0, isRounded: true)
    }()
+}
+/**
+ * Setter
+ */
+extension IconButton {
+   /**
+    * set image
+    */
+   public func setImg(iconURL: String, isNamed: Bool) {
+      imageView.image = isNamed ? NSImage(named: iconURL) : NSImage(contentsOf: URL(fileURLWithPath: iconURL))
+   }
 }
