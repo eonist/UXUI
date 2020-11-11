@@ -12,7 +12,7 @@ open class IconButton: UXButton {
       self.iconURL = iconURL
       self.isNamed = isNamed
       super.init(style: style, frame: frame)
-      _ = imageView
+      setImg(iconURL: iconURL, isNamed: isNamed)
    }
 }
 /**
@@ -24,7 +24,6 @@ extension IconButton {
     */
    @objc open func createImageView() -> NSImageView {
       with(.init()) {
-         setImg(iconURL: iconURL, isNamed: isNamed)
          addSubview($0)
          $0.anchorAndSize(to: self)
       }
