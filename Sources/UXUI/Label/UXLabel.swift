@@ -9,6 +9,7 @@ import Cocoa
  * - Note: Supports AutoLayout
  * - Fixme: ⚠️️ add placeholder text, paragraph style: https://medium.com/bpxl-craft/styling-nstextfield-a-guide-for-designers-8280da794263
  * - Fixme: ⚠️️ not showing cursor blink
+ * - Fixme: ⚠️️ figure out how you can set border color
  */
 open class UXLabel: NSTextField {
    public var style: Style = .default

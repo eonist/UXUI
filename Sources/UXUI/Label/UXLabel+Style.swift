@@ -4,7 +4,7 @@ import Cocoa
  */
 extension UXLabel {
    /**
-    * Fixme: ⚠️️ add border color?
+    * Fixme: ⚠️️ add border color? 👈
     * - Important: ⚠️️ make sure isBordered is true, or else text jumps when it becomes editable, super random, but no easy way around
     */
    public struct Style {
