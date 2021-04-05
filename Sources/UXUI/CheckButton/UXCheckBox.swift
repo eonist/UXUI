@@ -1,7 +1,7 @@
 import Foundation
 import QuartzCore
 /**
- * Checkbox for macos
+ * Checkbox for macos / iOS
  * ## Examples:
  * let btn: CheckButton = .init()
  * view.addSubview(btn)

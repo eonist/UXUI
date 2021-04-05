@@ -8,10 +8,8 @@ open class InteractiveView: UXLayerView, ConstraintKind {
    /**
     * - Abstract: Anchor and size stores the autolayout-constraints
     * - Note: We have to store the constraints because we animate them
-    * - Fixme: ⚠️️ use anchorSize variable instead
     */
-   public var anchor: (x: NSLayoutConstraint, y: NSLayoutConstraint)?
-   public var size: (w: NSLayoutConstraint, h: NSLayoutConstraint)?
+   public var anchorAndSize: AnchorAndSize?
    // Callbacks
    public var onDown: CallBack = { _ in }
    public var onUp: CallBack = { _ in }

@@ -7,7 +7,7 @@ import Foundation
  * ## Example:
  * Apperance().inDarkMode
  */
-public enum Apperance: String {
+public enum Apperance: String { // - Fixme: ⚠️️ remove this, now in Drkmode
    case Dark, Light
 }
 extension Apperance {
